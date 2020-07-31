@@ -28,6 +28,8 @@ import Hidden from "@material-ui/core/Hidden"
 import PropTypes from "prop-types"
 import CloseIcon from "@material-ui/icons/Close"
 import bgPatternImg from "../images/bgPatternImg.png"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons"
 
 const drawerWidth = "auto"
 
@@ -84,6 +86,10 @@ const useStyles = makeStyles(theme => ({
     marginBottom: 0,
     paddingLeft: 0,
     marginLeft: 0,
+  },
+  navLink: {
+    // width: "100vw",
+    color: "rgba(133,26,29)",
   },
 
   title: {
@@ -214,42 +220,7 @@ function Header() {
             </div>
           </Toolbar>
         </AppBar>
-        <main
-          className={clsx(classes.content, {
-            [classes.contentShift]: open,
-          })}
-        >
-          <Typography paragraph>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Rhoncus
-            dolor purus non enim praesent elementum facilisis leo vel. Risus at
-            ultrices mi tempus imperdiet. Semper risus in hendrerit gravida
-            rutrum quisque non tellus. Convallis convallis tellus id interdum
-            velit laoreet id donec ultrices. Odio morbi quis commodo odio aenean
-            sed adipiscing. Amet nisl suscipit adipiscing bibendum est ultricies
-            integer quis. Cursus euismod quis viverra nibh cras. Metus vulputate
-            eu scelerisque felis imperdiet proin fermentum leo. Mauris commodo
-            quis imperdiet massa tincidunt. Cras tincidunt lobortis feugiat
-            vivamus at augue. At augue eget arcu dictum varius duis at
-            consectetur lorem. Velit sed ullamcorper morbi tincidunt. Lorem
-            donec massa sapien faucibus et molestie ac.
-          </Typography>
-          <Typography paragraph>
-            Consequat mauris nunc congue nisi vitae suscipit. Fringilla est
-            ullamcorper eget nulla facilisi etiam dignissim diam. Pulvinar
-            elementum integer enim neque volutpat ac tincidunt. Ornare
-            suspendisse sed nisi lacus sed viverra tellus. Purus sit amet
-            volutpat consequat mauris. Elementum eu facilisis sed odio morbi.
-            Euismod lacinia at quis risus sed vulputate odio. Morbi tincidunt
-            ornare massa eget egestas purus viverra accumsan in. In hendrerit
-            gravida rutrum quisque non tellus orci ac. Pellentesque nec nam
-            aliquam sem et tortor. Habitant morbi tristique senectus et.
-            Adipiscing elit duis tristique sollicitudin nibh sit. Ornare aenean
-            euismod elementum nisi quis eleifend. Commodo viverra maecenas
-            accumsan lacus vel facilisis. Nulla posuere sollicitudin aliquam
-            ultrices sagittis orci a.
-          </Typography>
-        </main>
+        ////////////// DRAWER /////////////////
         <Drawer
           className={classes.drawer}
           variant="persistent"
@@ -260,26 +231,28 @@ function Header() {
           }}
         >
           <div className={classes.drawerHeader}>
-            <IconButton onClick={handleDrawerClose}>
-              <CloseIcon
-                style={{
-                  fontSize: 40,
-                  color: "#f9eacf",
-                }}
-              />
-            </IconButton>
+            <CloseIcon
+              style={{
+                fontSize: "4.5em",
+                color: "#f9eacf",
+              }}
+            />
+
             <div>
               <img src={Logo2} alt="logo" className={classes.logo2Img} />
             </div>
             <IconButton
               onClick={handleDrawerClose}
-              style={{ alignSelf: "flexStart" }}
+              style={{
+                // alignSelf: "flex-start",
+                marginBottom: "10vh",
+                marginLeft: "2.5vh",
+              }}
             >
               <CloseIcon
                 color="primary"
                 style={{
                   fontSize: 40,
-                  alignSelf: "flexStart",
                 }}
               />
             </IconButton>
@@ -331,21 +304,7 @@ function Header() {
               />
             </ListItem>
           </Link>
-          <Link
-            to="/deu/imprint"
-            className={classes.drawerItem}
-            activeClassName={classes.active}
-          >
-            <ListItem button key={"IMPRESSUM"}>
-              <ListItemText
-                primary={
-                  <Typography align="center" variant="h6">
-                    IMPRESSUM
-                  </Typography>
-                }
-              />
-            </ListItem>
-          </Link>
+
           <Link
             to="/deu/contact"
             className={classes.drawerItem}
@@ -361,7 +320,7 @@ function Header() {
               />
             </ListItem>
           </Link>
-          {/* <a
+          <a
             target="_blank"
             rel="noopener noreferrer"
             href="https://www.instagram.com/suliko_hamburg_"
@@ -398,7 +357,7 @@ function Header() {
             >
               <FontAwesomeIcon icon={faFacebook} size="2x" />
             </ListItem>
-          </a> */}
+          </a>
           {/* </div> */}
           {/* </List> */}
         </Drawer>

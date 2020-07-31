@@ -14,37 +14,24 @@ import "./layout.css"
 import { ThemeProvider } from "@material-ui/core/styles"
 import { makeStyles } from "@material-ui/core/styles"
 import theme from "./theme"
+import Footer from "./footer"
 
 const useStyles = makeStyles(theme => ({}))
 
 const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
-
   return (
     <>
       <ThemeProvider theme={theme}>
-        <Header siteTitle={data.site.siteMetadata.title} />
+        <Header />
         <div
           style={{
-            margin: `0 auto`,
+            marginTop: "20vh",
             maxWidth: 960,
-            padding: `0 1.0875rem 1.45rem`,
+            // padding: `0 1.0875rem 1.45rem`,
           }}
         >
           <main>{children}</main>
-          <footer>
-            © {new Date().getFullYear()}, Built with
-            {` `}
-            <a href="https://www.gatsbyjs.org">Gatsby</a>
-          </footer>
+          <Footer />
         </div>
       </ThemeProvider>
     </>
