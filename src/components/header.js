@@ -196,12 +196,12 @@ function Header() {
             </Hidden>
 
             <Link to="/">
-              <img
-                src={Logo1}
-                srcSet={`${Logo1} 600w, ${Logo1Plus2} 1280w`}
-                alt="logo"
-                className={classes.logoImg}
-              />
+              <Hidden smUp>
+                <img src={Logo1} alt="logo" className={classes.logoImg} />
+              </Hidden>
+              <Hidden xsDown>
+                <img src={Logo1Plus2} alt="logo" className={classes.logoImg} />
+              </Hidden>
             </Link>
             <div style={{ display: "flex" }}>
               <Hidden xsDown>
