@@ -1,5 +1,5 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
+import { Link, graphql, useStaticQuery } from "gatsby"
 
 import Layout from "../components/layout"
 import Image from "../components/image"
@@ -12,92 +12,142 @@ import BackgroundSlider from "gatsby-image-background-slider"
 import { AutoRotatingCarousel } from "material-auto-rotating-carousel"
 import { Slide } from "material-auto-rotating-carousel"
 import BackgroundImage from "gatsby-background-image"
+import { makeStyles } from "@material-ui/core/styles"
+import "bootstrap/dist/css/bootstrap.min.css"
+import Carousel from "react-bootstrap/Carousel"
 
-const IndexPage = ({ data }) => (
-  <Layout>
-    <SEO title="Home" />
-    {/* <h1>Hi people</h1>
+const useStyles = makeStyles(theme => ({
+  bgImg: {
+    width: " 100%",
+    height: "100vh",
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat",
+  },
+  blackOverlay: {
+    display: "flex",
+    height: "100%",
+    alignItems: "center",
+    color: "white",
+    background:
+      "radial-gradient(circle, rgba(255,255,255,0) 19%, rgba(0,0,0,0.9192051820728291) 68%)",
+    [theme.breakpoints.down("xs")]: {
+      background:
+        "radial-gradient(circle, rgba(255,255,255,0) 32%, rgba(0,0,0,0.773546918767507) 67%)",
+    },
+  },
+  bgTextWrapper: {
+    maxWidth: "700px",
+    margin: "0 auto",
+    textAlign: "center",
+  },
+}))
+
+const IndexPage = props => {
+  const classes = useStyles()
+
+  return (
+    <Layout>
+      <SEO title="Home" />
+      {/* <h1>Hi people</h1>
     <p>Welcome to your new Gatsby site.</p>
     <p>Now go build something great.</p> */}
-    {/* <img src={bgImg1600} alt="food" style={{}}/> */}
-    <BackgroundImage
-      style={{
-        width: " 100%",
-        height: "100vh",
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
-      }}
-      fluid={data.img2.childImageSharp.fluid}
-      // fadeIn
-    >
-      <div
-        style={{
-          display: "flex",
-          // backgroundColor: "rgba(0,0,0,.5)",
-          background:
-            "radial-gradient(circle, rgba(255,255,255,0) 32%, rgba(0,0,0,0.773546918767507) 67%)",
-          height: "100%",
-          alignItems: "center",
-          color: "white",
-        }}
+      {/* <BackgroundSlider
+        query={useStaticQuery(bgQuery)}
+        images={["1.jpg", "2.jpg"]}
+      ></BackgroundSlider> */}
+      <Carousel prevIcon={false} nextIcon={false}>
+        <Carousel.Item>
+          <BackgroundImage
+            className={classes.bgImg}
+            fluid={props.data.img1.childImageSharp.fluid}
+            // fadeIn
+          >
+            <div className={classes.blackOverlay}>
+              <div className={classes.bgTextWrapper}>
+                <p>Text 1</p>
+              </div>
+            </div>
+          </BackgroundImage>
+        </Carousel.Item>
+        <Carousel.Item>
+          <BackgroundImage
+            className={classes.bgImg}
+            fluid={props.data.img2.childImageSharp.fluid}
+            // fadeIn
+          >
+            <div className={classes.blackOverlay}>
+              <div className={classes.bgTextWrapper}>
+                <p>Text 2</p>
+              </div>
+            </div>
+          </BackgroundImage>
+        </Carousel.Item>
+      </Carousel>
+      {/* <BackgroundImage
+        className={classes.bgImg}
+
+        // fluid={props.data.img2.childImageSharp.fluid}
+        // fadeIn
       >
-        <div
-          style={{ maxWidth: "700px", margin: "0 auto", textAlign: "center" }}
-        >
-          <p>Text should be here</p>
+        <div className={classes.blackOverlay}>
+          <div className={classes.bgTextWrapper}>
+            <p>Text should be here</p>
+          </div>
         </div>
-      </div>
-    </BackgroundImage>
-    {/* <Img fluid={data.img1.childImageSharp.fluid} alt="Georgian food" /> */}
-    {/* <Img fluid={data.img2.childImageSharp.fluid} alt="Georgian food" /> */}
-    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium
-    commodi earum possimus, odit laboriosam voluptatibus numquam labore quod,
-    culpa optio exercitationem sint eveniet maxime quam amet voluptates nesciunt
-    blanditiis dignissimos repellendus dolorum est quos placeat officiis eos.
-    Ullam, consequatur inventore velit consectetur excepturi incidunt ipsum
-    quaerat eius dolorem, placeat dolore? Lorem ipsum dolor, sit amet
-    consectetur adipisicing elit. Praesentium commodi earum possimus, odit
-    laboriosam voluptatibus numquam labore quod, culpa optio exercitationem sint
-    eveniet maxime quam amet voluptates nesciunt blanditiis dignissimos
-    repellendus dolorum est quos placeat officiis eos. Ullam, consequatur
-    inventore velit consectetur excepturi incidunt ipsum quaerat eius dolorem,
-    placeat dolore? Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-    Praesentium commodi earum possimus, odit laboriosam voluptatibus numquam
-    labore quod, culpa optio exercitationem sint eveniet maxime quam amet
-    voluptates nesciunt blanditiis dignissimos repellendus dolorum est quos
-    placeat officiis eos. Ullam, consequatur inventore velit consectetur
-    excepturi incidunt ipsum quaerat eius dolorem, placeat dolore? Lorem ipsum
-    dolor, sit amet consectetur adipisicing elit. Praesentium commodi earum
-    possimus, odit laboriosam voluptatibus numquam labore quod, culpa optio
-    exercitationem sint eveniet maxime quam amet voluptates nesciunt blanditiis
-    dignissimos repellendus dolorum est quos placeat officiis eos. Ullam,
-    consequatur inventore velit consectetur excepturi incidunt ipsum quaerat
-    eius dolorem, placeat dolore? Lorem ipsum dolor, sit amet consectetur
-    adipisicing elit. Praesentium commodi earum possimus, odit laboriosam
-    voluptatibus numquam labore quod, culpa optio exercitationem sint eveniet
-    maxime quam amet voluptates nesciunt blanditiis dignissimos repellendus
-    dolorum est quos placeat officiis eos. Ullam, consequatur inventore velit
-    consectetur excepturi incidunt ipsum quaerat eius dolorem, placeat dolore?
-    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium
-    commodi earum possimus, odit laboriosam voluptatibus numquam labore quod,
-    culpa optio exercitationem sint eveniet maxime quam amet voluptates nesciunt
-    blanditiis dignissimos repellendus dolorum est quos placeat officiis eos.
-    Ullam, consequatur inventore velit consectetur excepturi incidunt ipsum
-    quaerat eius dolorem, placeat dolore? Lorem ipsum dolor, sit amet
-    consectetur adipisicing elit. Praesentium commodi earum possimus, odit
-    laboriosam voluptatibus numquam labore quod, culpa optio exercitationem sint
-    eveniet maxime quam amet voluptates nesciunt blanditiis dignissimos
-    repellendus dolorum est quos placeat officiis eos. Ullam, consequatur
-    inventore velit consectetur excepturi incidunt ipsum quaerat eius dolorem,
-    placeat dolore? Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-    Praesentium commodi earum possimus, odit laboriosam voluptatibus numquam
-    labore quod, culpa optio exercitationem sint eveniet maxime quam amet
-    voluptates nesciunt blanditiis dignissimos repellendus dolorum est quos
-    placeat officiis eos. Ullam, consequatur inventore velit consectetur
-    excepturi incidunt ipsum quaerat eius dolorem, placeat dolore?
-  </Layout>
-)
+      </BackgroundImage> */}
+      {/* <Img fluid={props.data.img1.childImageSharp.fluid} alt="Georgian food" /> */}
+      {/* <Img fluid={props.data.img2.childImageSharp.fluid} alt="Georgian food" /> */}
+      {/* <img src={bgImg1600} alt="food" style={{}}/> */}
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium
+      commodi earum possimus, odit laboriosam voluptatibus numquam labore quod,
+      culpa optio exercitationem sint eveniet maxime quam amet voluptates
+      nesciunt blanditiis dignissimos repellendus dolorum est quos placeat
+      officiis eos. Ullam, consequatur inventore velit consectetur excepturi
+      incidunt ipsum quaerat eius dolorem, placeat dolore? Lorem ipsum dolor,
+      sit amet consectetur adipisicing elit. Praesentium commodi earum possimus,
+      odit laboriosam voluptatibus numquam labore quod, culpa optio
+      exercitationem sint eveniet maxime quam amet voluptates nesciunt
+      blanditiis dignissimos repellendus dolorum est quos placeat officiis eos.
+      Ullam, consequatur inventore velit consectetur excepturi incidunt ipsum
+      quaerat eius dolorem, placeat dolore? Lorem ipsum dolor, sit amet
+      consectetur adipisicing elit. Praesentium commodi earum possimus, odit
+      laboriosam voluptatibus numquam labore quod, culpa optio exercitationem
+      sint eveniet maxime quam amet voluptates nesciunt blanditiis dignissimos
+      repellendus dolorum est quos placeat officiis eos. Ullam, consequatur
+      inventore velit consectetur excepturi incidunt ipsum quaerat eius dolorem,
+      placeat dolore? Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+      Praesentium commodi earum possimus, odit laboriosam voluptatibus numquam
+      labore quod, culpa optio exercitationem sint eveniet maxime quam amet
+      voluptates nesciunt blanditiis dignissimos repellendus dolorum est quos
+      placeat officiis eos. Ullam, consequatur inventore velit consectetur
+      excepturi incidunt ipsum quaerat eius dolorem, placeat dolore? Lorem ipsum
+      dolor, sit amet consectetur adipisicing elit. Praesentium commodi earum
+      possimus, odit laboriosam voluptatibus numquam labore quod, culpa optio
+      exercitationem sint eveniet maxime quam amet voluptates nesciunt
+      blanditiis dignissimos repellendus dolorum est quos placeat officiis eos.
+      Ullam, consequatur inventore velit consectetur excepturi incidunt ipsum
+      quaerat eius dolorem, placeat dolore? Lorem ipsum dolor, sit amet
+      consectetur adipisicing elit. Praesentium commodi earum possimus, odit
+      laboriosam voluptatibus numquam labore quod, culpa optio exercitationem
+      sint eveniet maxime quam amet voluptates nesciunt blanditiis dignissimos
+      repellendus dolorum est quos placeat officiis eos. Ullam, consequatur
+      inventore velit consectetur excepturi incidunt ipsum quaerat eius dolorem,
+      placeat dolore? Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+      Praesentium commodi earum possimus, odit laboriosam voluptatibus numquam
+      labore quod, culpa optio exercitationem sint eveniet maxime quam amet
+      voluptates nesciunt blanditiis dignissimos repellendus dolorum est quos
+      placeat officiis eos. Ullam, consequatur inventore velit consectetur
+      excepturi incidunt ipsum quaerat eius dolorem, placeat dolore? Lorem ipsum
+      dolor, sit amet consectetur adipisicing elit. Praesentium commodi earum
+      possimus, odit laboriosam voluptatibus numquam labore quod, culpa optio
+      exercitationem sint eveniet maxime quam amet voluptates nesciunt
+      blanditiis dignissimos repellendus dolorum est quos placeat officiis eos.
+      Ullam, consequatur inventore velit consectetur excepturi incidunt ipsum
+      quaerat eius dolorem, placeat dolore?
+    </Layout>
+  )
+}
 
 export default IndexPage
 
@@ -119,3 +169,40 @@ export const query = graphql`
     }
   }
 `
+// export const bgQuery = graphql`
+//   query {
+//     backgrounds: allFile(filter: { sourceInstanceName: { eq: "images" } }) {
+//       nodes {
+//         relativePath
+//         childImageSharp {
+//           fluid(maxWidth: 2000, quality: 100) {
+//             ...GatsbyImageSharpFluid
+//           }
+//         }
+//       }
+//     }
+//   }
+// `
+
+// query MyQuery {
+//   file(relativePath: {eq: "images"}) {
+//     childImageSharp {
+//       fluid(maxWidth: 2000) {
+//        ...GatsbyImageSharpFluid
+//       }
+//     }
+//   }
+// }
+
+// query MyQuery {
+//   allFile(filter: {sourceInstanceName: {eq: "images"}}) {
+//     nodes {
+//       relativePath
+//       childImageSharp {
+//                 fluid (maxWidth: 4000, quality: 100){
+//                  ...GatsbyImageSharpFluid
+//                 }
+//               }
+//     }
+//   }
+// }
