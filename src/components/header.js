@@ -88,7 +88,7 @@ const useStyles = makeStyles(theme => ({
       maxWidth: 200,
     },
   },
-  list: {},
+  list: { color: "white" },
 
   listItem: {
     paddingTop: 0,
@@ -159,6 +159,7 @@ const useStyles = makeStyles(theme => ({
 }))
 export const LangSwitch = () => {
   const classes = useStyles()
+
   return (
     <div>
       <List className={classes.list}>
@@ -191,7 +192,8 @@ function Header() {
       <ThemeProvider theme={theme}>
         <CssBaseline />
         <AppBar
-          color="secondary"
+          color="transparent"
+          elevation={0}
           position="fixed"
           className={clsx(classes.appBar, {
             [classes.appBarShift]: open,
@@ -222,8 +224,7 @@ function Header() {
               </Hidden>
 
               <IconButton
-                style={{ paddingLeft: 5 }}
-                color="inherit"
+                style={{ paddingLeft: 5, color: "white" }}
                 aria-label="open drawer"
                 edge="end"
                 onClick={handleDrawerOpen}
@@ -234,7 +235,7 @@ function Header() {
             </div>
           </Toolbar>
         </AppBar>
-        ////////////// DRAWER /////////////////
+
         <Drawer
           className={classes.drawer}
           variant="persistent"
