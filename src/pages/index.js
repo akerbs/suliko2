@@ -36,7 +36,7 @@ const IndexPage = ({ data }) => (
           display: "flex",
           // backgroundColor: "rgba(0,0,0,.5)",
           background:
-            "radial-gradient(circle, rgba(255,255,255,0) 0%, rgba(0,0,0,0.7035189075630253) 100%)",
+            "radial-gradient(circle, rgba(255,255,255,0) 32%, rgba(0,0,0,0.773546918767507) 67%)",
           height: "100%",
           alignItems: "center",
           color: "white",
