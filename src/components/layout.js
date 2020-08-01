@@ -23,10 +23,11 @@ const Layout = ({ children }) => {
     <>
       <ThemeProvider theme={theme}>
         <Header />
+
         <div
           style={{
-            marginTop: "20vh",
-            maxWidth: 960,
+            marginTop: "12vh",
+            // maxWidth: 960,
             // padding: `0 1.0875rem 1.45rem`,
           }}
         >

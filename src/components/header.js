@@ -52,13 +52,22 @@ const useStyles = makeStyles(theme => ({
     marginRight: drawerWidth,
   },
 
+  toolbar: {
+    display: "flex",
+    justifyContent: "space-between",
+    paddingLeft: 5,
+    paddingRight: 5,
+  },
+
   logo2Img: {
-    paddingTop: 5,
-    paddingBottom: 5,
+    paddingTop: 3,
+    paddingBottom: 3,
     marginBottom: 0,
-    maxWidth: 150,
+    maxWidth: 130,
     // [theme.breakpoints.down("md")]: {},
-    // [theme.breakpoints.down("sm")]: {},
+    [theme.breakpoints.down("sm")]: {
+      maxWidth: 110,
+    },
     // [theme.breakpoints.down("xs")]: {
     //   maxWidth: 200,
     // },
@@ -72,7 +81,9 @@ const useStyles = makeStyles(theme => ({
     marginBottom: 0,
     maxWidth: 500,
     [theme.breakpoints.down("md")]: {},
-    [theme.breakpoints.down("sm")]: {},
+    [theme.breakpoints.down("sm")]: {
+      maxWidth: 380,
+    },
     [theme.breakpoints.down("xs")]: {
       maxWidth: 200,
     },
@@ -84,8 +95,6 @@ const useStyles = makeStyles(theme => ({
     paddingBottom: 0,
     marginTop: 0,
     marginBottom: 0,
-    paddingLeft: 0,
-    marginLeft: 0,
   },
   navLink: {
     // width: "100vw",
@@ -105,11 +114,12 @@ const useStyles = makeStyles(theme => ({
   drawerPaper: {
     // backgroundImage: `url(${bgPatternImg}) `,
     backgroundColor: "#f9eacf",
+
     backgroundRepeat: "repeat",
     overflowX: "hidden",
     width: drawerWidth,
     height: "100vh",
-    zIndex: 9999,
+    // zIndex: 9999,
   },
   drawerHeader: {
     display: "flex",
@@ -132,17 +142,18 @@ const useStyles = makeStyles(theme => ({
   content: {
     flexGrow: 1,
     padding: theme.spacing(1),
-    transition: theme.transitions.create("margin", {
-      easing: theme.transitions.easing.sharp,
-      duration: theme.transitions.duration.leavingScreen,
-    }),
+
+    // transition: theme.transitions.create("margin", {
+    //   easing: theme.transitions.easing.easeOutBounce,
+    //   duration: theme.transitions.duration.complex,
+    // }),
     marginRight: -drawerWidth,
   },
   contentShift: {
-    transition: theme.transitions.create("margin", {
-      easing: theme.transitions.easing.easeOut,
-      duration: theme.transitions.duration.enteringScreen,
-    }),
+    // transition: theme.transitions.create("margin", {
+    //   easing: theme.transitions.easing.easeOutBounce,
+    //   duration: theme.transitions.duration.complex,
+    // }),
     marginRight: 0,
   },
 }))
@@ -151,10 +162,12 @@ export const LangSwitch = () => {
   return (
     <div>
       <List className={classes.list}>
-        <ListItem className={classes.listItem}>deu</ListItem>
-        <ListItem className={classes.listItem}>rus</ListItem>
-        <ListItem className={classes.listItem}>geo</ListItem>
-        <ListItem className={classes.listItem}>eng</ListItem>
+        <Typography align="center" variant="body2">
+          <ListItem className={classes.listItem}>deu</ListItem>
+          <ListItem className={classes.listItem}>rus</ListItem>
+          <ListItem className={classes.listItem}>geo</ListItem>
+          <ListItem className={classes.listItem}>eng</ListItem>
+        </Typography>
       </List>
     </div>
   )
@@ -184,7 +197,7 @@ function Header() {
             [classes.appBarShift]: open,
           })}
         >
-          <Toolbar style={{ display: "flex", justifyContent: "space-between" }}>
+          <Toolbar className={classes.toolbar}>
             <Hidden xsDown>
               {/* <Link to="/"> */}
               <img src={Logo2} alt="logo" className={classes.logo2Img} />
@@ -209,6 +222,7 @@ function Header() {
               </Hidden>
 
               <IconButton
+                style={{ paddingLeft: 5 }}
                 color="inherit"
                 aria-label="open drawer"
                 edge="end"
@@ -224,6 +238,7 @@ function Header() {
         <Drawer
           className={classes.drawer}
           variant="persistent"
+          transitionDuration={{ enter: 600, exit: 600 }}
           anchor="top"
           open={open}
           classes={{
