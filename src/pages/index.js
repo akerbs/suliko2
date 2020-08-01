@@ -31,10 +31,10 @@ const useStyles = makeStyles(theme => ({
     color: "white",
     background:
       "radial-gradient(circle, rgba(255,255,255,0) 19%, rgba(0,0,0,0.9192051820728291) 68%)",
-    [theme.breakpoints.down("xs")]: {
-      background:
-        "radial-gradient(circle, rgba(255,255,255,0) 32%, rgba(0,0,0,0.773546918767507) 67%)",
-    },
+    // [theme.breakpoints.down("xs")]: {
+    //   background:
+    //     "radial-gradient(circle, rgba(255,255,255,0) 32%, rgba(0,0,0,0.773546918767507) 67%)",
+    // },
   },
   bgTextWrapper: {
     maxWidth: "700px",
