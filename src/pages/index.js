@@ -4,7 +4,7 @@ import { Link, graphql, useStaticQuery } from "gatsby"
 import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
-// import bgImg1600 from "../images/bgImg1600.gif"
+import bgImg1600 from "../images/bgImg1600.gif"
 // import img1 from "../images/1.jpg"
 // import img2 from "../images/2.jpg"
 import Img from "gatsby-image"
@@ -31,10 +31,10 @@ const useStyles = makeStyles(theme => ({
     color: "white",
     background:
       "radial-gradient(circle, rgba(255,255,255,0) 19%, rgba(0,0,0,0.9192051820728291) 68%)",
-    // [theme.breakpoints.down("xs")]: {
-    //   background:
-    //     "radial-gradient(circle, rgba(255,255,255,0) 32%, rgba(0,0,0,0.773546918767507) 67%)",
-    // },
+    [theme.breakpoints.down("xs")]: {
+      background:
+        "radial-gradient(circle, rgba(255,255,255,0) 32%, rgba(0,0,0,0.773546918767507) 67%)",
+    },
   },
   bgTextWrapper: {
     maxWidth: "700px",
@@ -86,8 +86,7 @@ const IndexPage = props => {
       </Carousel>
       {/* <BackgroundImage
         className={classes.bgImg}
-
-        // fluid={props.data.img2.childImageSharp.fluid}
+        fluid={props.data.img2.childImageSharp.fluid}
         // fadeIn
       >
         <div className={classes.blackOverlay}>
@@ -155,14 +154,14 @@ export const query = graphql`
   query {
     img1: file(relativePath: { eq: "1.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 2000) {
+        fluid(maxWidth: 4000) {
           ...GatsbyImageSharpFluid
         }
       }
     }
     img2: file(relativePath: { eq: "2.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 2000) {
+        fluid(maxWidth: 4000) {
           ...GatsbyImageSharpFluid
         }
       }
