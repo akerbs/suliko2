@@ -55,8 +55,12 @@ const useStyles = makeStyles(theme => ({
   toolbar: {
     display: "flex",
     justifyContent: "space-between",
-    paddingLeft: 5,
-    paddingRight: 5,
+    paddingLeft: 10,
+    paddingRight: 10,
+    [theme.breakpoints.down("sm")]: {
+      paddingLeft: 0,
+      paddingRight: 10,
+    },
   },
 
   logo2Img: {
@@ -112,9 +116,9 @@ const useStyles = makeStyles(theme => ({
     flexShrink: 0,
   },
   drawerPaper: {
-    // backgroundImage: `url(${bgPatternImg}) `,
-    backgroundColor: "#f9eacf",
-
+    backgroundImage: `url(${bgPatternImg}) `,
+    // backgroundColor: "#f9eacf",
+    // background: 'radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(255,255,255,1) 92%)',
     backgroundRepeat: "repeat",
     overflowX: "hidden",
     width: drawerWidth,
@@ -239,7 +243,7 @@ function Header() {
         <Drawer
           className={classes.drawer}
           variant="persistent"
-          transitionDuration={{ enter: 600, exit: 600 }}
+          transitionDuration={{ enter: 500, exit: 500 }}
           anchor="top"
           open={open}
           classes={{
