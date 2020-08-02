@@ -5,8 +5,8 @@ import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
 import bgImg1600 from "../images/bgImg1600.gif"
-// import img1 from "../images/1.jpg"
-// import img2 from "../images/2.jpg"
+import img1 from "../images/1.jpg"
+import img2 from "../images/2.jpg"
 import Img from "gatsby-image"
 import BackgroundSlider from "gatsby-image-background-slider"
 import { AutoRotatingCarousel } from "material-auto-rotating-carousel"
@@ -15,31 +15,61 @@ import BackgroundImage from "gatsby-background-image"
 import { makeStyles } from "@material-ui/core/styles"
 import "bootstrap/dist/css/bootstrap.min.css"
 import Carousel from "react-bootstrap/Carousel"
+import LangSwAkk from "../components/langSwAkk"
 
 const useStyles = makeStyles(theme => ({
-  bgImg: {
+  // bgImg: {
+  //   width: " 100%",
+  //   height: "100vh",
+  //   backgroundSize: "cover",
+  //   backgroundPosition: "center",
+  //   backgroundRepeat: "no-repeat",
+  // },
+  // blackOverlay: {
+  //   display: "flex",
+  //   height: "100%",
+  //   alignItems: "center",
+  //   color: "white",
+  //   background:
+  //     "radial-gradient(circle, rgba(255,255,255,0) 19%, rgba(0,0,0,0.9192051820728291) 68%)",
+  //   [theme.breakpoints.down("xs")]: {
+  //     background:
+  //       "radial-gradient(circle, rgba(255,255,255,0) 32%, rgba(0,0,0,0.773546918767507) 67%)",
+  //   },
+  // },
+  // bgTextWrapper: {
+  //   maxWidth: "700px",
+  //   margin: "0 auto",
+  //   textAlign: "center",
+  // },
+  first: {
+    backgroundImage: `url(${bgImg1600})`,
     width: " 100%",
     height: "100vh",
     backgroundSize: "cover",
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
+    animation: "$bgImgs 5s ease-in-out infinite alternate ",
   },
-  blackOverlay: {
+  // "@keyframes bgImgs": {
+  //   "0%, 50%": {
+  //     backgroundImage: `url(${img1})`,
+  //   },
+  //   "50.01%, 100%": {
+  //     backgroundImage: `url(${img2})`,
+  //   },
+  // },
+  second: {
     display: "flex",
     height: "100%",
-    alignItems: "center",
+    // alignItems: "center",
     color: "white",
     background:
-      "radial-gradient(circle, rgba(255,255,255,0) 19%, rgba(0,0,0,0.9192051820728291) 68%)",
+      "radial-gradient(circle, rgba(255,255,255,0) 27%, rgba(0,0,0,0.9192051820728291) 80%)",
     [theme.breakpoints.down("xs")]: {
       background:
-        "radial-gradient(circle, rgba(255,255,255,0) 32%, rgba(0,0,0,0.773546918767507) 67%)",
+        "radial-gradient(circle, rgba(255,255,255,0) 52%, rgba(0,0,0,0.9192051820728291) 95%)",
     },
-  },
-  bgTextWrapper: {
-    maxWidth: "700px",
-    margin: "0 auto",
-    textAlign: "center",
   },
 }))
 
@@ -49,6 +79,11 @@ const IndexPage = props => {
   return (
     <Layout>
       <SEO title="Home" />
+      <div className={classes.first}>
+        <div className={classes.second}>
+          <LangSwAkk />
+        </div>
+      </div>
       {/* <h1>Hi people</h1>
     <p>Welcome to your new Gatsby site.</p>
     <p>Now go build something great.</p> */}
@@ -56,34 +91,20 @@ const IndexPage = props => {
         query={useStaticQuery(bgQuery)}
         images={["1.jpg", "2.jpg"]}
       ></BackgroundSlider> */}
-      <Carousel prevIcon={false} nextIcon={false}>
+      {/* <Carousel prevIcon={false} nextIcon={false}>
         <Carousel.Item>
-          <BackgroundImage
-            className={classes.bgImg}
+          <Img
             fluid={props.data.img1.childImageSharp.fluid}
-            // fadeIn
-          >
-            <div className={classes.blackOverlay}>
-              <div className={classes.bgTextWrapper}>
-                <p>Text 1</p>
-              </div>
-            </div>
-          </BackgroundImage>
+            alt="Georgian food"
+          />
         </Carousel.Item>
         <Carousel.Item>
-          <BackgroundImage
-            className={classes.bgImg}
+          <Img
             fluid={props.data.img2.childImageSharp.fluid}
-            // fadeIn
-          >
-            <div className={classes.blackOverlay}>
-              <div className={classes.bgTextWrapper}>
-                <p>Text 2</p>
-              </div>
-            </div>
-          </BackgroundImage>
+            alt="Georgian food"
+          />
         </Carousel.Item>
-      </Carousel>
+      </Carousel> */}
       {/* <BackgroundImage
         className={classes.bgImg}
         fluid={props.data.img2.childImageSharp.fluid}

@@ -25,13 +25,12 @@ const Layout = ({ children }) => {
         <Header />
 
         <div
-          style={
-            {
-              // marginTop: "14vh",
-              // maxWidth: 960,
-              // padding: `0 1.0875rem 1.45rem`,
-            }
-          }
+          style={{
+            backgroundColor: "#f9eacf",
+            // marginTop: "14vh",
+            // maxWidth: 960,
+            // padding: `0 1.0875rem 1.45rem`,
+          }}
         >
           <main>{children}</main>
           <Footer />

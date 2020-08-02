@@ -21,6 +21,7 @@ import { ThemeProvider } from "@material-ui/core/styles"
 import { Link } from "gatsby"
 import Logo1Plus2 from "../images/Logo1Plus2.gif"
 import Logo1 from "../images/Logo1.gif"
+import Logo1x from "../images/logo2.gif"
 import Logo2 from "../images/Logo2.png"
 import Grid from "@material-ui/core/Grid"
 import withWidth from "@material-ui/core/withWidth"
@@ -30,6 +31,8 @@ import CloseIcon from "@material-ui/icons/Close"
 import bgPatternImg from "../images/bgPatternImg.png"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons"
+// import LangSwAkk from "./langSwAkk"
+import Button from "@material-ui/core/Button"
 
 const drawerWidth = "auto"
 
@@ -83,31 +86,16 @@ const useStyles = makeStyles(theme => ({
     paddingTop: 10,
     paddingBottom: 0,
     marginBottom: 0,
-    maxWidth: 500,
+    maxWidth: 480,
     [theme.breakpoints.down("md")]: {},
     [theme.breakpoints.down("sm")]: {
       maxWidth: 380,
     },
     [theme.breakpoints.down("xs")]: {
-      maxWidth: 200,
+      maxWidth: 150,
     },
   },
-  list: { color: "white" },
 
-  listItem: {
-    paddingTop: 0,
-    paddingBottom: 0,
-    marginTop: 0,
-    marginBottom: 0,
-  },
-  navLink: {
-    // width: "100vw",
-    color: "rgba(133,26,29)",
-  },
-
-  title: {
-    flexGrow: 1,
-  },
   hide: {
     display: "none",
   },
@@ -116,7 +104,8 @@ const useStyles = makeStyles(theme => ({
     flexShrink: 0,
   },
   drawerPaper: {
-    backgroundImage: `url(${bgPatternImg}) `,
+    // backgroundImage: `url(${bgPatternImg}) `,
+    backgroundColor: "rgba(43,42,41)",
     // backgroundColor: "#f9eacf",
     // background: 'radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(255,255,255,1) 92%)',
     backgroundRepeat: "repeat",
@@ -136,9 +125,10 @@ const useStyles = makeStyles(theme => ({
   },
   drawerItem: {
     textDecoration: "none",
-    color: "rgba(133,26,29)",
+    color: "#f9eacf",
     width: "100vw",
   },
+
   active: {
     color: "rgba(255,255,255)",
     textShadow: "rgba(133,26,29) 0 0 5px",
@@ -160,23 +150,21 @@ const useStyles = makeStyles(theme => ({
     // }),
     marginRight: 0,
   },
-}))
-export const LangSwitch = () => {
-  const classes = useStyles()
+  navLink: {
+    // width: "100vw",
+    // color: "rgba(133,26,29)",
+    color: "#f9eacf",
+  },
+  reservierenButton: {
+    backgroundColor: "#f9eacf",
+    // background: `url(${bgPatternImg}) `,
 
-  return (
-    <div>
-      <List className={classes.list}>
-        <Typography align="center" variant="body2">
-          <ListItem className={classes.listItem}>deu</ListItem>
-          <ListItem className={classes.listItem}>rus</ListItem>
-          <ListItem className={classes.listItem}>geo</ListItem>
-          <ListItem className={classes.listItem}>eng</ListItem>
-        </Typography>
-      </List>
-    </div>
-  )
-}
+    position: "fixed",
+    bottom: 20,
+    right: 20,
+    zIndex: 999,
+  },
+}))
 
 function Header() {
   const classes = useStyles()
@@ -205,14 +193,14 @@ function Header() {
         >
           <Toolbar className={classes.toolbar}>
             <Hidden xsDown>
-              {/* <Link to="/"> */}
-              <img src={Logo2} alt="logo" className={classes.logo2Img} />
-              {/* </Link> */}
+              <Link to="/">
+                <img src={Logo2} alt="logo" className={classes.logo2Img} />
+              </Link>
             </Hidden>
-
+            {/* 
             <Hidden smUp>
-              <LangSwitch />
-            </Hidden>
+              <LangSwAkk />
+            </Hidden> */}
 
             <Link to="/">
               <Hidden smUp>
@@ -223,20 +211,37 @@ function Header() {
               </Hidden>
             </Link>
             <div style={{ display: "flex" }}>
-              <Hidden xsDown>
-                <LangSwitch />
-              </Hidden>
+              {/* <Hidden xsDown>
+                <LangSwAkk />
+              </Hidden> */}
 
               <IconButton
-                style={{ paddingLeft: 5, color: "white" }}
+                style={{
+                  paddingLeft: 5,
+                  // color: "white",
+                  color: "#f9eacf",
+                  // backgroundColor: "white",
+                  // backgroundColor: "#f9eacf",
+                  backgroundColor: "rgba(43,42,41)",
+                }}
+                size="small"
                 aria-label="open drawer"
-                edge="end"
+                // edge="end"
                 onClick={handleDrawerOpen}
                 className={clsx(open && classes.hide)}
               >
-                <MenuIcon style={{ fontSize: 40 }} />
+                <MenuIcon style={{ fontSize: 30, margin: 6 }} />
               </IconButton>
             </div>
+            <Button
+              // size="small"
+              className={classes.reservierenButton}
+              variant="contained"
+              // color="primary"
+              // onClick={handleOpen}
+            >
+              Reservieren
+            </Button>
           </Toolbar>
         </AppBar>
 
@@ -251,30 +256,28 @@ function Header() {
           }}
         >
           <div className={classes.drawerHeader}>
-            <CloseIcon
-              style={{
-                fontSize: "4.5em",
-                color: "#f9eacf",
-              }}
-            />
+            <CloseIcon style={{ color: "transparent" }} />
 
-            <div>
+            {/* <div>
               <img src={Logo2} alt="logo" className={classes.logo2Img} />
-            </div>
+            </div> */}
             <IconButton
-              onClick={handleDrawerClose}
+              // onClick={handleDrawerClose}
               style={{
-                // alignSelf: "flex-start",
-                marginBottom: "10vh",
-                marginLeft: "2.5vh",
+                paddingLeft: 5,
+                // color: "white",
+                color: "rgba(43,42,41)",
+                // backgroundColor: "white",
+                // backgroundColor: "#f9eacf",
+                backgroundColor: "#f9eacf",
               }}
+              size="small"
+              aria-label="close drawer"
+              edge="end"
+              onClick={handleDrawerClose}
+              // className={clsx(open && classes.hide)}
             >
-              <CloseIcon
-                color="primary"
-                style={{
-                  fontSize: 40,
-                }}
-              />
+              <CloseIcon style={{ fontSize: 30, margin: 6 }} />
             </IconButton>
           </div>
           {/* <List className={classes.list}> */}
@@ -343,25 +346,6 @@ function Header() {
           <a
             target="_blank"
             rel="noopener noreferrer"
-            href="https://www.instagram.com/suliko_hamburg_"
-            className={classes.navLink}
-            //  onClick="this.blur()"
-          >
-            <ListItem
-              button
-              key={"instagram"}
-              style={{
-                display: "block",
-                textAlign: "center",
-                paddingTop: 15,
-              }}
-            >
-              <FontAwesomeIcon icon={faInstagram} size="2x" />
-            </ListItem>
-          </a>
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
             href="https://www.facebook.com/restaurant.suliko.hamburg"
             className={classes.navLink}
             //  onClick="this.blur()"
@@ -378,8 +362,31 @@ function Header() {
               <FontAwesomeIcon icon={faFacebook} size="2x" />
             </ListItem>
           </a>
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://www.instagram.com/suliko_hamburg_"
+            className={classes.navLink}
+            //  onClick="this.blur()"
+          >
+            <ListItem
+              button
+              key={"instagram"}
+              style={{
+                display: "block",
+                textAlign: "center",
+                paddingTop: 15,
+              }}
+            >
+              <FontAwesomeIcon icon={faInstagram} size="2x" />
+            </ListItem>
+          </a>
+
           {/* </div> */}
           {/* </List> */}
+          <div style={{ margin: "10px auto" }}>
+            <img src={Logo2} alt="logo" className={classes.logo2Img} />
+          </div>
         </Drawer>
       </ThemeProvider>
     </div>

@@ -5,6 +5,7 @@ import { makeStyles } from "@material-ui/core/styles"
 import Container from "@material-ui/core/Container"
 import Breadcrumbs from "@material-ui/core/Breadcrumbs"
 import Link from "@material-ui/core/Link"
+import Logo2 from "../images/Logo2.png"
 
 const useStyles = makeStyles(theme => ({
   footerContainer: {
@@ -39,6 +40,21 @@ const useStyles = makeStyles(theme => ({
   //     textShadow: "white 0 0 5px",
   //   },
   // },
+  logo2Img: {
+    // paddingTop: 3,
+    // paddingBottom: 3,
+    // marginBottom: 0,
+
+    margin: "0 auto",
+    maxWidth: 130,
+    // [theme.breakpoints.down("md")]: {},
+    [theme.breakpoints.down("sm")]: {
+      maxWidth: 110,
+    },
+    // [theme.breakpoints.down("xs")]: {
+    //   maxWidth: 200,
+    // },
+  },
 }))
 
 const Footer = () => {
@@ -47,7 +63,7 @@ const Footer = () => {
   return (
     <Container maxWidth="sm" className={classes.footerContainer}>
       <CssBaseline />
-
+      <img src={Logo2} alt="logo" className={classes.logo2Img} />
       <Typography variant="body2">
         {" © "} {new Date().getFullYear()} Suliko. All Rights Reserved
         <br />{" "}
