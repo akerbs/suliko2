@@ -133,7 +133,7 @@ const IndexPage = props => {
       {/* <Img fluid={props.data.img1.childImageSharp.fluid} alt="Georgian food" /> */}
       {/* <Img fluid={props.data.img2.childImageSharp.fluid} alt="Georgian food" /> */}
       {/* <img src={bgImg1600} alt="food" style={{}}/> */}
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium
+      {/* Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium
       commodi earum possimus, odit laboriosam voluptatibus numquam labore quod,
       culpa optio exercitationem sint eveniet maxime quam amet voluptates
       nesciunt blanditiis dignissimos repellendus dolorum est quos placeat
@@ -178,7 +178,7 @@ const IndexPage = props => {
       exercitationem sint eveniet maxime quam amet voluptates nesciunt
       blanditiis dignissimos repellendus dolorum est quos placeat officiis eos.
       Ullam, consequatur inventore velit consectetur excepturi incidunt ipsum
-      quaerat eius dolorem, placeat dolore?
+      quaerat eius dolorem, placeat dolore? */}
     </Layout>
   )
 }
