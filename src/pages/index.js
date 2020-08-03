@@ -43,7 +43,10 @@ const useStyles = makeStyles(theme => ({
   //   textAlign: "center",
   // },
   first: {
+    top: 0,
+    left: 0,
     backgroundImage: `url(${bgImg1600})`,
+
     width: " 100%",
     height: "100vh",
     backgroundSize: "cover",
@@ -60,6 +63,8 @@ const useStyles = makeStyles(theme => ({
   //   },
   // },
   second: {
+    top: 0,
+    left: 0,
     display: "flex",
     height: "100%",
     // alignItems: "center",
@@ -84,6 +89,17 @@ const IndexPage = props => {
           <LangSwAkk />
         </div>
       </div>
+      {/* <BackgroundImage
+        className={classes.bgImg}
+        fluid={props.data.img2.childImageSharp.fluid}
+        // fadeIn
+      >
+        <div className={classes.blackOverlay}>
+          <div className={classes.bgTextWrapper}>
+            <p>Text should be here</p>
+          </div>
+        </div>
+      </BackgroundImage> */}
       {/* <h1>Hi people</h1>
     <p>Welcome to your new Gatsby site.</p>
     <p>Now go build something great.</p> */}
