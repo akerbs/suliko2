@@ -15,6 +15,7 @@ import { ThemeProvider } from "@material-ui/core/styles"
 import { makeStyles } from "@material-ui/core/styles"
 import theme from "./theme"
 import Footer from "./footer"
+// import LangSwAkk from "../components/langSwAkk"
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -28,7 +29,7 @@ const Layout = ({ children }) => {
     <div className={classes.root}>
       <ThemeProvider theme={theme}>
         <Header />
-
+        {/* <LangSwAkk /> */}
         <main>{children}</main>
         <Footer />
       </ThemeProvider>

@@ -61,20 +61,20 @@ const LangSwAkk = () => {
           className={classes.accordionItemContent}
           class="accordionItemContent"
         >
-          <span lassName={classes.langItem} class="langItem">
-            <Link to="/page-2" lassName={classes.link} class="link">
+          <span className={classes.langItem} class="langItem">
+            <Link to="/page-2" className={classes.link} class="link">
               Rus
             </Link>
           </span>
           <br />
-          <span lassName={classes.langItem} class="langItem">
-            <Link to="/page-2" lassName={classes.link} class="link">
+          <span className={classes.langItem} class="langItem">
+            <Link to="/page-2" className={classes.link} class="link">
               Geo
             </Link>
           </span>
           <br />
-          <span lassName={classes.langItem} class="langItem">
-            <Link to="/page-2" lassName={classes.link} class="link">
+          <span className={classes.langItem} class="langItem">
+            <Link to="/page-2" className={classes.link} class="link">
               Eng
             </Link>
           </span>

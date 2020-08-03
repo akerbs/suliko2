@@ -49,7 +49,7 @@ const useStyles = makeStyles(theme => ({
     backgroundSize: "cover",
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
-    // animation: "$bgImgs 5s ease-in-out infinite alternate ",
+    animation: "$bgImgs 5s ease-in-out infinite alternate ",
   },
   // "@keyframes bgImgs": {
   //   "0%, 50%": {
@@ -60,12 +60,10 @@ const useStyles = makeStyles(theme => ({
   //   },
   // },
   second: {
-    // display: "flex",
-    width: " 100%",
-    height: "100vh",
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-    backgroundRepeat: "no-repeat",
+    display: "flex",
+    height: "100%",
+    // alignItems: "center",
+    color: "white",
     background:
       "radial-gradient(circle, rgba(255,255,255,0) 27%, rgba(0,0,0,0.9192051820728291) 80%)",
     [theme.breakpoints.down("xs")]: {
