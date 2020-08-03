@@ -48,7 +48,7 @@ const useStyles = makeStyles(theme => ({
     backgroundImage: `url(${bgImg1600})`,
 
     width: " 100vw",
-    height: "100vh",
+    height: "auto",
     backgroundSize: "cover",
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
@@ -68,7 +68,7 @@ const useStyles = makeStyles(theme => ({
     display: "flex",
 
     width: " 100vw",
-    height: "100vh",
+    height: "auto",
     // alignItems: "center",
     color: "white",
     background:
@@ -87,7 +87,9 @@ const IndexPage = props => {
     <Layout>
       <SEO title="Home" />
       <div className={classes.first}>
-        <div className={classes.second}>{/* <LangSwAkk /> */}</div>
+        <div className={classes.second}>
+          <LangSwAkk />
+        </div>
       </div>
       {/* <BackgroundImage
         className={classes.bgImg}
