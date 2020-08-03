@@ -16,6 +16,8 @@ import { makeStyles } from "@material-ui/core/styles"
 import "bootstrap/dist/css/bootstrap.min.css"
 import Carousel from "react-bootstrap/Carousel"
 import LangSwAkk from "../components/langSwAkk"
+// import bgImgs from "../components/bgImgs"
+import Grid from "@material-ui/core/Grid"
 
 const useStyles = makeStyles(theme => ({
   root: {},
@@ -45,18 +47,17 @@ const useStyles = makeStyles(theme => ({
   // },
   first: {
     backgroundImage: `url(${bgImgs})`,
-    backgroundAttachment: "fixed",
+
     width: " 100%",
     height: "100vh",
     backgroundSize: "cover",
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
+    // display: "block",
 
     // animation: "$bgImgs 5s ease-in-out infinite alternate ",
   },
-  text1: {
-    position: "relative",
-  },
+  text1: {},
   // "@keyframes bgImgs": {
   //   "0%, 50%": {
   //     backgroundImage: `url(${img1})`,
@@ -85,9 +86,17 @@ const IndexPage = props => {
   return (
     <Layout>
       <SEO title="Home" />
-      <div className={classes.root}>
-        <div className={classes.first}>{/* <LangSwAkk /> */}</div>
-
+      <Grid
+        spacing={3}
+        container
+        direction="column"
+        justify="flex-start"
+        alignItems="flex-start"
+      >
+        <Grid item xs={12}>
+          {/* <div className={classes.first}></div> */}
+          <img src={bgImgs} />
+        </Grid>
         {/* <h1>Hi people</h1>
     <p>Welcome to your new Gatsby site.</p>
     <p>Now go build something great.</p> */}
@@ -123,58 +132,61 @@ const IndexPage = props => {
         {/* <Img fluid={props.data.img1.childImageSharp.fluid} alt="Georgian food" /> */}
         {/* <Img fluid={props.data.img2.childImageSharp.fluid} alt="Georgian food" /> */}
         {/* <img src={bgImg1600} alt="food" style={{}}/> */}
-        <div className={classes.text1}>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium
-          commodi earum possimus, odit laboriosam voluptatibus numquam labore
-          quod, culpa optio exercitationem sint eveniet maxime quam amet
-          voluptates nesciunt blanditiis dignissimos repellendus dolorum est
-          quos placeat officiis eos. Ullam, consequatur inventore velit
-          consectetur excepturi incidunt ipsum quaerat eius dolorem, placeat
-          dolore? Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-          Praesentium commodi earum possimus, odit laboriosam voluptatibus
-          numquam labore quod, culpa optio exercitationem sint eveniet maxime
-          quam amet voluptates nesciunt blanditiis dignissimos repellendus
-          dolorum est quos placeat officiis eos. Ullam, consequatur inventore
-          velit consectetur excepturi incidunt ipsum quaerat eius dolorem,
-          placeat dolore? Lorem ipsum dolor, sit amet consectetur adipisicing
-          elit. Praesentium commodi earum possimus, odit laboriosam voluptatibus
-          numquam labore quod, culpa optio exercitationem sint eveniet maxime
-          quam amet voluptates nesciunt blanditiis dignissimos repellendus
-          dolorum est quos placeat officiis eos. Ullam, consequatur inventore
-          velit consectetur excepturi incidunt ipsum quaerat eius dolorem,
-          placeat dolore? Lorem ipsum dolor, sit amet consectetur adipisicing
-          elit. Praesentium commodi earum possimus, odit laboriosam voluptatibus
-          numquam labore quod, culpa optio exercitationem sint eveniet maxime
-          quam amet voluptates nesciunt blanditiis dignissimos repellendus
-          dolorum est quos placeat officiis eos. Ullam, consequatur inventore
-          velit consectetur excepturi incidunt ipsum quaerat eius dolorem,
-          placeat dolore? Lorem ipsum dolor, sit amet consectetur adipisicing
-          elit. Praesentium commodi earum possimus, odit laboriosam voluptatibus
-          numquam labore quod, culpa optio exercitationem sint eveniet maxime
-          quam amet voluptates nesciunt blanditiis dignissimos repellendus
-          dolorum est quos placeat officiis eos. Ullam, consequatur inventore
-          velit consectetur excepturi incidunt ipsum quaerat eius dolorem,
-          placeat dolore? Lorem ipsum dolor, sit amet consectetur adipisicing
-          elit. Praesentium commodi earum possimus, odit laboriosam voluptatibus
-          numquam labore quod, culpa optio exercitationem sint eveniet maxime
-          quam amet voluptates nesciunt blanditiis dignissimos repellendus
-          dolorum est quos placeat officiis eos. Ullam, consequatur inventore
-          velit consectetur excepturi incidunt ipsum quaerat eius dolorem,
-          placeat dolore? Lorem ipsum dolor, sit amet consectetur adipisicing
-          elit. Praesentium commodi earum possimus, odit laboriosam voluptatibus
-          numquam labore quod, culpa optio exercitationem sint eveniet maxime
-          quam amet voluptates nesciunt blanditiis dignissimos repellendus
-          dolorum est quos placeat officiis eos. Ullam, consequatur inventore
-          velit consectetur excepturi incidunt ipsum quaerat eius dolorem,
-          placeat dolore? Lorem ipsum dolor, sit amet consectetur adipisicing
-          elit. Praesentium commodi earum possimus, odit laboriosam voluptatibus
-          numquam labore quod, culpa optio exercitationem sint eveniet maxime
-          quam amet voluptates nesciunt blanditiis dignissimos repellendus
-          dolorum est quos placeat officiis eos. Ullam, consequatur inventore
-          velit consectetur excepturi incidunt ipsum quaerat eius dolorem,
-          placeat dolore?
-        </div>
-      </div>
+        <Grid item xs={12}>
+          <div className={classes.text1}>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+            Praesentium commodi earum possimus, odit laboriosam voluptatibus
+            numquam labore quod, culpa optio exercitationem sint eveniet maxime
+            quam amet voluptates nesciunt blanditiis dignissimos repellendus
+            dolorum est quos placeat officiis eos. Ullam, consequatur inventore
+            velit consectetur excepturi incidunt ipsum quaerat eius dolorem,
+            placeat dolore? Lorem ipsum dolor, sit amet consectetur adipisicing
+            elit. Praesentium commodi earum possimus, odit laboriosam
+            voluptatibus numquam labore quod, culpa optio exercitationem sint
+            eveniet maxime quam amet voluptates nesciunt blanditiis dignissimos
+            repellendus dolorum est quos placeat officiis eos. Ullam,
+            consequatur inventore velit consectetur excepturi incidunt ipsum
+            quaerat eius dolorem, placeat dolore? Lorem ipsum dolor, sit amet
+            consectetur adipisicing elit. Praesentium commodi earum possimus,
+            odit laboriosam voluptatibus numquam labore quod, culpa optio
+            exercitationem sint eveniet maxime quam amet voluptates nesciunt
+            blanditiis dignissimos repellendus dolorum est quos placeat officiis
+            eos. Ullam, consequatur inventore velit consectetur excepturi
+            incidunt ipsum quaerat eius dolorem, placeat dolore? Lorem ipsum
+            dolor, sit amet consectetur adipisicing elit. Praesentium commodi
+            earum possimus, odit laboriosam voluptatibus numquam labore quod,
+            culpa optio exercitationem sint eveniet maxime quam amet voluptates
+            nesciunt blanditiis dignissimos repellendus dolorum est quos placeat
+            officiis eos. Ullam, consequatur inventore velit consectetur
+            excepturi incidunt ipsum quaerat eius dolorem, placeat dolore? Lorem
+            ipsum dolor, sit amet consectetur adipisicing elit. Praesentium
+            commodi earum possimus, odit laboriosam voluptatibus numquam labore
+            quod, culpa optio exercitationem sint eveniet maxime quam amet
+            voluptates nesciunt blanditiis dignissimos repellendus dolorum est
+            quos placeat officiis eos. Ullam, consequatur inventore velit
+            consectetur excepturi incidunt ipsum quaerat eius dolorem, placeat
+            dolore? Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+            Praesentium commodi earum possimus, odit laboriosam voluptatibus
+            numquam labore quod, culpa optio exercitationem sint eveniet maxime
+            quam amet voluptates nesciunt blanditiis dignissimos repellendus
+            dolorum est quos placeat officiis eos. Ullam, consequatur inventore
+            velit consectetur excepturi incidunt ipsum quaerat eius dolorem,
+            placeat dolore? Lorem ipsum dolor, sit amet consectetur adipisicing
+            elit. Praesentium commodi earum possimus, odit laboriosam
+            voluptatibus numquam labore quod, culpa optio exercitationem sint
+            eveniet maxime quam amet voluptates nesciunt blanditiis dignissimos
+            repellendus dolorum est quos placeat officiis eos. Ullam,
+            consequatur inventore velit consectetur excepturi incidunt ipsum
+            quaerat eius dolorem, placeat dolore? Lorem ipsum dolor, sit amet
+            consectetur adipisicing elit. Praesentium commodi earum possimus,
+            odit laboriosam voluptatibus numquam labore quod, culpa optio
+            exercitationem sint eveniet maxime quam amet voluptates nesciunt
+            blanditiis dignissimos repellendus dolorum est quos placeat officiis
+            eos. Ullam, consequatur inventore velit consectetur excepturi
+            incidunt ipsum quaerat eius dolorem, placeat dolore?
+          </div>
+        </Grid>
+      </Grid>
     </Layout>
   )
 }
