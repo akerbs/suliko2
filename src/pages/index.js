@@ -62,6 +62,7 @@ const useStyles = makeStyles(theme => ({
   second: {
     display: "flex",
     height: "100%",
+    height: "100vh",
     // alignItems: "center",
     color: "white",
     background:
