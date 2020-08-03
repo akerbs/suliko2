@@ -49,6 +49,7 @@ const useStyles = makeStyles(theme => ({
     backgroundSize: "cover",
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
+    zIndex: -9999,
     // animation: "$bgImgs 5s ease-in-out infinite alternate ",
   },
   // "@keyframes bgImgs": {
@@ -60,6 +61,7 @@ const useStyles = makeStyles(theme => ({
   //   },
   // },
   second: {
+    zIndex: -999,
     display: "flex",
     height: "100%",
     // alignItems: "center",
