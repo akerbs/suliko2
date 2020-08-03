@@ -63,8 +63,8 @@ const useStyles = makeStyles(theme => ({
     // paddingLeft: 10,
     // paddingRight: 10,
     [theme.breakpoints.down("sm")]: {
-      paddingLeft: 0,
-      paddingRight: 10,
+      // paddingLeft: 0,
+      // paddingRight: 10,
     },
   },
 
@@ -94,7 +94,7 @@ const useStyles = makeStyles(theme => ({
       maxWidth: 380,
     },
     [theme.breakpoints.down("xs")]: {
-      maxWidth: 150,
+      maxWidth: 220,
     },
   },
 
@@ -129,6 +129,10 @@ const useStyles = makeStyles(theme => ({
     textDecoration: "none",
     color: "#f9eacf",
     width: "100vw",
+    "&:hover": {
+      textDecoration: "none",
+      color: "white",
+    },
   },
 
   active: {
@@ -156,6 +160,9 @@ const useStyles = makeStyles(theme => ({
     // width: "100vw",
     // color: "rgba(133,26,29)",
     color: "#f9eacf",
+    "&:hover": {
+      color: "white",
+    },
   },
   reservierenButton: {
     backgroundColor: "#f9eacf",
@@ -220,11 +227,13 @@ function Header() {
               <IconButton
                 style={{
                   paddingLeft: 5,
+                  marginRight: 0,
+                  border: "1px solid black",
                   // color: "white",
-                  color: "#f9eacf",
+                  color: "rgba(43,42,41)",
                   // backgroundColor: "white",
                   // backgroundColor: "#f9eacf",
-                  backgroundColor: "rgba(43,42,41)",
+                  backgroundColor: "white",
                 }}
                 size="small"
                 aria-label="open drawer"
@@ -267,6 +276,7 @@ function Header() {
               // onClick={handleDrawerClose}
               style={{
                 paddingLeft: 5,
+                marginRight: 0,
                 // color: "white",
                 color: "rgba(43,42,41)",
                 // backgroundColor: "white",
@@ -285,7 +295,7 @@ function Header() {
           {/* <List className={classes.list}> */}
           {/* <div className={classes.drawerItems}> */}
           <Link
-            to="#"
+            to="/page-2"
             className={classes.drawerItem}
             activeClassName={classes.active}
           >
@@ -300,7 +310,7 @@ function Header() {
             </ListItem>
           </Link>
           <Link
-            to="#"
+            to="/page-2"
             className={classes.drawerItem}
             activeClassName={classes.active}
           >
@@ -315,7 +325,7 @@ function Header() {
             </ListItem>
           </Link>
           <Link
-            to="#"
+            to="/page-2"
             className={classes.drawerItem}
             activeClassName={classes.active}
           >
@@ -331,7 +341,7 @@ function Header() {
           </Link>
 
           <Link
-            to="#"
+            to="/page-2"
             className={classes.drawerItem}
             activeClassName={classes.active}
           >
