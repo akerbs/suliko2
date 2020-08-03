@@ -50,7 +50,7 @@ const useStyles = makeStyles(theme => ({
     backgroundSize: "cover",
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
-    float: "top",
+    float: "right",
     // animation: "$bgImgs 5s ease-in-out infinite alternate ",
   },
   // "@keyframes bgImgs": {
