@@ -11,7 +11,7 @@
   font-family: sans-serif;
 }
 
-.accordion-item {
+.accordionItem {
   text-align: center;
   padding: 1em 0;
   color: black;
@@ -21,23 +21,23 @@
   /* background-image: url("../images/bgPatternImg.png"); */
 }
 
-.accordion-item-content {
+.accordionItemContent {
   height: 0;
   overflow: hidden;
   transition: height 0.25s;
 }
 
-.accordion:hover .accordion-item-content {
+.accordion:hover .accordionItemContent {
   height: 0;
   overflow: hidden;
   transition: height 0.25s;
 }
 
-.accordion:hover .accordion-item:hover .accordion-item-content {
+.accordion:hover .accordionItem:hover .accordionItemContent {
   height: 7.5em;
 }
 
-.accordion .accordion-item--default .accordion-item-content {
+.accordion .accordionItem--default .accordionItemContent {
   height: 7.5em;
 }
 

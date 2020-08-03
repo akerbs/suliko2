@@ -6,42 +6,47 @@ import { Link } from "gatsby"
 
 const useStyles = makeStyles(theme => ({
   // accordion: {
-  //   padding: 0,
-  //   margin: "0 auto",
-  //   width: "8vw",
-  //   "&:hover&accordionItemContent": {
-  //     height: 0,
+  //   padding: "0",
+  //   alignSelf: "flex-end",
+  //   marginTop: "auto",
+  //   fontSize: "14px",
+  //   width: "50px",
+  //   height: "auto",
+  //   marginBottom: "20px",
+  //   marginLeft: "20px",
+  //   position: "fixed",
+  //   "&hover $accordionItemContent": {
+  //     height: "0",
   //     overflow: "hidden",
   //     transition: "height 0.25s",
   //   },
-  //   "&:hover&accordionItem:hover&accordionItemContent": {
-  //     height: "5em",
+  //   "&hover $accordionItem:hover $accordionItemContent": {
+  //     height: "7.5em",
   //   },
-  //   "&accordionItem&accordionItemContent": {
-  //     height: "5em",
+  //   "& $accordionItem--default $accordionItemContent": {
+  //     height: "7.5em",
   //   },
   // },
   // accordionItem: {
   //   textAlign: "center",
-  //   padding: " 1em",
+  //   padding: "1em 0",
   //   color: "black",
   //   borderRadius: "30px",
-  //   backgrounColor: "white",
+  //   backgroundColor: "#f9eacf",
   // },
   // accordionItemContent: {
-  //   height: 0,
+  //   height: "0",
   //   overflow: "hidden",
   //   transition: "height 0.25s",
   // },
-  // list: {
-  //   color: "white",
-  //   listStyleType: "none",
+  // langItem: {
+  //   display: "inline-block",
+  //   paddingTop: "15px",
   // },
-  // listItem: {
-  //   paddingTop: 0,
-  //   paddingBottom: 0,
-  //   marginTop: 0,
-  //   marginBottom: 0,
+  // link: {
+  //   textDecoration: "none",
+  //   color: "black",
+  //   "&:hover": { textDecoration: "none", color: "black", fontWeight: "bold" },
   // },
 }))
 
@@ -49,24 +54,27 @@ const LangSwAkk = () => {
   const classes = useStyles()
 
   return (
-    <div class="accordion">
-      <div class="accordion-item">
+    <div className={classes.accordion} class="accordion">
+      <div className={classes.accordionItem} class="accordionItem">
         Deu
-        <div class="accordion-item-content">
-          <span class="lang-item">
-            <Link to="/page-2" class="link">
+        <div
+          className={classes.accordionItemContent}
+          class="accordionItemContent"
+        >
+          <span lassName={classes.langItem} class="langItem">
+            <Link to="/page-2" lassName={classes.link} class="link">
               Rus
             </Link>
           </span>
           <br />
-          <span class="lang-item">
-            <Link to="/page-2" class="link">
+          <span lassName={classes.langItem} class="langItem">
+            <Link to="/page-2" lassName={classes.link} class="link">
               Geo
             </Link>
           </span>
           <br />
-          <span class="lang-item">
-            <Link to="/page-2" class="link">
+          <span lassName={classes.langItem} class="langItem">
+            <Link to="/page-2" lassName={classes.link} class="link">
               Eng
             </Link>
           </span>

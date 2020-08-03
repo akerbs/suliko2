@@ -58,8 +58,10 @@ const useStyles = makeStyles(theme => ({
   toolbar: {
     display: "flex",
     justifyContent: "space-between",
-    paddingLeft: 10,
-    paddingRight: 10,
+    alignItems: "flex-start",
+    padding: "20px  20px 0px 10px",
+    // paddingLeft: 10,
+    // paddingRight: 10,
     [theme.breakpoints.down("sm")]: {
       paddingLeft: 0,
       paddingRight: 10,
@@ -118,7 +120,7 @@ const useStyles = makeStyles(theme => ({
     display: "flex",
     alignItems: "center",
 
-    margin: "0px 20px",
+    margin: "20px 20px 0px 0px",
     // necessary for content to be below app bar
     ...theme.mixins.toolbar,
     justifyContent: "space-between",
@@ -283,7 +285,7 @@ function Header() {
           {/* <List className={classes.list}> */}
           {/* <div className={classes.drawerItems}> */}
           <Link
-            to="/deu"
+            to="#"
             className={classes.drawerItem}
             activeClassName={classes.active}
           >
@@ -298,7 +300,7 @@ function Header() {
             </ListItem>
           </Link>
           <Link
-            to="/deu/about-us"
+            to="#"
             className={classes.drawerItem}
             activeClassName={classes.active}
           >
@@ -313,7 +315,7 @@ function Header() {
             </ListItem>
           </Link>
           <Link
-            to="/deu/menu"
+            to="#"
             className={classes.drawerItem}
             activeClassName={classes.active}
           >
@@ -329,7 +331,7 @@ function Header() {
           </Link>
 
           <Link
-            to="/deu/contact"
+            to="#"
             className={classes.drawerItem}
             activeClassName={classes.active}
           >
@@ -343,25 +345,6 @@ function Header() {
               />
             </ListItem>
           </Link>
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://www.facebook.com/restaurant.suliko.hamburg"
-            className={classes.navLink}
-            //  onClick="this.blur()"
-          >
-            <ListItem
-              button
-              key={"facebook"}
-              style={{
-                display: "block",
-                textAlign: "center",
-                paddingTop: 15,
-              }}
-            >
-              <FontAwesomeIcon icon={faFacebook} size="2x" />
-            </ListItem>
-          </a>
           <a
             target="_blank"
             rel="noopener noreferrer"
@@ -379,6 +362,25 @@ function Header() {
               }}
             >
               <FontAwesomeIcon icon={faInstagram} size="2x" />
+            </ListItem>
+          </a>
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://www.facebook.com/restaurant.suliko.hamburg"
+            className={classes.navLink}
+            //  onClick="this.blur()"
+          >
+            <ListItem
+              button
+              key={"facebook"}
+              style={{
+                display: "block",
+                textAlign: "center",
+                paddingTop: 15,
+              }}
+            >
+              <FontAwesomeIcon icon={faFacebook} size="2x" />
             </ListItem>
           </a>
 
