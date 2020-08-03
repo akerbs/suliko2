@@ -43,12 +43,9 @@ const useStyles = makeStyles(theme => ({
   //   textAlign: "center",
   // },
   first: {
-    top: 0,
-    left: 0,
     backgroundImage: `url(${bgImg1600})`,
-
-    width: " 100vw",
-    height: "auto",
+    width: " 100%",
+    height: "100vh",
     backgroundSize: "cover",
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
@@ -63,12 +60,8 @@ const useStyles = makeStyles(theme => ({
   //   },
   // },
   second: {
-    top: 0,
-    left: 0,
     display: "flex",
-
-    width: " 100vw",
-    height: "auto",
+    height: "100%",
     // alignItems: "center",
     color: "white",
     background:
@@ -91,17 +84,6 @@ const IndexPage = props => {
           <LangSwAkk />
         </div>
       </div>
-      {/* <BackgroundImage
-        className={classes.bgImg}
-        fluid={props.data.img2.childImageSharp.fluid}
-        // fadeIn
-      >
-        <div className={classes.blackOverlay}>
-          <div className={classes.bgTextWrapper}>
-            <p>Text should be here</p>
-          </div>
-        </div>
-      </BackgroundImage> */}
       {/* <h1>Hi people</h1>
     <p>Welcome to your new Gatsby site.</p>
     <p>Now go build something great.</p> */}
@@ -137,7 +119,7 @@ const IndexPage = props => {
       {/* <Img fluid={props.data.img1.childImageSharp.fluid} alt="Georgian food" /> */}
       {/* <Img fluid={props.data.img2.childImageSharp.fluid} alt="Georgian food" /> */}
       {/* <img src={bgImg1600} alt="food" style={{}}/> */}
-      {/* Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium
       commodi earum possimus, odit laboriosam voluptatibus numquam labore quod,
       culpa optio exercitationem sint eveniet maxime quam amet voluptates
       nesciunt blanditiis dignissimos repellendus dolorum est quos placeat
@@ -182,7 +164,7 @@ const IndexPage = props => {
       exercitationem sint eveniet maxime quam amet voluptates nesciunt
       blanditiis dignissimos repellendus dolorum est quos placeat officiis eos.
       Ullam, consequatur inventore velit consectetur excepturi incidunt ipsum
-      quaerat eius dolorem, placeat dolore? */}
+      quaerat eius dolorem, placeat dolore?
     </Layout>
   )
 }

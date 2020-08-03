@@ -235,7 +235,7 @@ function Header() {
                 <MenuIcon style={{ fontSize: 30, margin: 6 }} />
               </IconButton>
             </div>
-            <Button
+            {/* <Button
               // size="small"
               className={classes.reservierenButton}
               variant="contained"
@@ -243,7 +243,7 @@ function Header() {
               // onClick={handleOpen}
             >
               Reservieren
-            </Button>
+            </Button> */}
           </Toolbar>
         </AppBar>
 
