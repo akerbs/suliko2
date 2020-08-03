@@ -3,12 +3,12 @@
   /* padding: 0; */
   /* align-self: flex-end; */
   left: 20;
-  margin-top: auto;
+  /* margin-top: auto; */
   font-size: 14px;
   width: 50px;
   height: auto;
   margin-bottom: 20px;
-  margin-left: 20px;
+  margin-left: -60px;
   position: fixed;
   font-family: sans-serif;
 }
@@ -16,10 +16,10 @@
 .accordionItem {
   text-align: center;
   padding: 1em 0;
-  color: black;
+  color: #f9eacf;
   border-radius: 30px;
-  /* background-color: white; */
-  background-color: #f9eacf;
+  background-color: rgba(43, 42, 41);
+  /* background-color: #f9eacf; */
   /* background-image: url("../images/bgPatternImg.png"); */
 }
 
@@ -59,10 +59,10 @@
 }
 .link {
   text-decoration: none;
-  color: black;
+  color: #f9eacf;
 }
 .link:hover {
   text-decoration: none;
-  color: black;
+  color: #f9eacf;
   font-weight: bold;
 }

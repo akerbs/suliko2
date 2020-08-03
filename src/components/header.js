@@ -212,7 +212,7 @@ function Header() {
                 <img src={Logo1Plus2} alt="logo" className={classes.logoImg} />
               </Hidden>
             </Link>
-            <div style={{ display: "flex" }}>
+            <div style={{ display: "flex", justifyContent: "column" }}>
               {/* <Hidden xsDown>
                 <LangSwAkk />
               </Hidden> */}
