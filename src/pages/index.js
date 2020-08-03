@@ -37,11 +37,11 @@ const useStyles = makeStyles(theme => ({
   //       "radial-gradient(circle, rgba(255,255,255,0) 32%, rgba(0,0,0,0.773546918767507) 67%)",
   //   },
   // },
-  bgTextWrapper: {
-    maxWidth: "700px",
-    margin: "0 auto",
-    textAlign: "center",
-  },
+  // bgTextWrapper: {
+  //   maxWidth: "700px",
+  //   margin: "0 auto",
+  //   textAlign: "center",
+  // },
   first: {
     backgroundImage: `url(${bgImg1600})`,
     width: " 100%",
@@ -49,7 +49,7 @@ const useStyles = makeStyles(theme => ({
     backgroundSize: "cover",
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
-    animation: "$bgImgs 5s ease-in-out infinite alternate ",
+    // animation: "$bgImgs 5s ease-in-out infinite alternate ",
   },
   // "@keyframes bgImgs": {
   //   "0%, 50%": {
