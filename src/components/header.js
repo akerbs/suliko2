@@ -95,6 +95,7 @@ const useStyles = makeStyles(theme => ({
     },
     [theme.breakpoints.down("xs")]: {
       maxWidth: 220,
+      paddingTop: 5,
     },
   },
 
@@ -232,8 +233,8 @@ function Header() {
                   // color: "white",
                   color: "rgba(43,42,41)",
                   // backgroundColor: "white",
-                  // backgroundColor: "#f9eacf",
-                  backgroundColor: "white",
+                  backgroundColor: "#f9eacf",
+                  // backgroundColor: "white",
                 }}
                 size="small"
                 aria-label="open drawer"
