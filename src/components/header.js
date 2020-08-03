@@ -31,7 +31,7 @@ import CloseIcon from "@material-ui/icons/Close"
 import bgPatternImg from "../images/bgPatternImg.png"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons"
-// import LangSwAkk from "./langSwAkk"
+import LangSwAkk from "./langSwAkk"
 import Button from "@material-ui/core/Button"
 
 const drawerWidth = "auto"
@@ -199,8 +199,8 @@ function Header() {
                 <img src={Logo2} alt="logo" className={classes.logo2Img} />
               </Link>
             </Hidden>
-            {/* 
-            <Hidden smUp>
+
+            {/* <Hidden smUp>
               <LangSwAkk />
             </Hidden> */}
 
@@ -216,7 +216,7 @@ function Header() {
               {/* <Hidden xsDown>
                 <LangSwAkk />
               </Hidden> */}
-
+              <LangSwAkk />
               <IconButton
                 style={{
                   paddingLeft: 5,
