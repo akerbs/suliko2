@@ -63,7 +63,7 @@ const Footer = () => {
   return (
     <Container maxWidth="sm" className={classes.footerContainer}>
       <CssBaseline />
-      {/* <img src={Logo2} alt="logo" className={classes.logo2Img} /> */}
+      <img src={Logo2} alt="logo" className={classes.logo2Img} />
       <Typography variant="body2">
         {" © "} {new Date().getFullYear()} Suliko. All Rights Reserved
         <br />{" "}

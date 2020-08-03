@@ -5,6 +5,7 @@ import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
 import bgImgs from "../images/bgImgs.gif"
+import bgImgsV from "../images/bgImgsV.gif"
 import img1 from "../images/1.jpg"
 import img2 from "../images/2.jpg"
 import Img from "gatsby-image"
@@ -18,6 +19,9 @@ import Carousel from "react-bootstrap/Carousel"
 import LangSwAkk from "../components/langSwAkk"
 // import bgImgs from "../components/bgImgs"
 import Grid from "@material-ui/core/Grid"
+import withWidth from "@material-ui/core/withWidth"
+import Hidden from "@material-ui/core/Hidden"
+import PropTypes from "prop-types"
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -47,19 +51,22 @@ const useStyles = makeStyles(theme => ({
   //   margin: "0 auto",
   //   textAlign: "center",
   // },
-  first: {
-    backgroundImage: `url(${bgImgs})`,
+  // first: {
+  //   backgroundImage: `url(${bgImgs})`,
 
-    width: " 100%",
-    height: "100vh",
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-    backgroundRepeat: "no-repeat",
-    // display: "block",
+  //   width: " 100%",
+  //   height: "100vh",
+  //   backgroundSize: "cover",
+  //   backgroundPosition: "center",
+  //   backgroundRepeat: "no-repeat",
+  //   // display: "block",
 
-    // animation: "$bgImgs 5s ease-in-out infinite alternate ",
+  //   // animation: "$bgImgs 5s ease-in-out infinite alternate ",
+  // },
+  text1: {
+    width: "80%",
+    margin: "0 auto",
   },
-  text1: {},
   // "@keyframes bgImgs": {
   //   "0%, 50%": {
   //     backgroundImage: `url(${img1})`,
@@ -80,6 +87,13 @@ const useStyles = makeStyles(theme => ({
   //       "radial-gradient(circle, rgba(255,255,255,0) 52%, rgba(0,0,0,0.9192051820728291) 95%)",
   //   },
   // },
+  imgFirst: {
+    [theme.breakpoints.down("xs")]: {
+      // transform: "rotate(90deg)",
+      // width: " 100%",
+      // height: "100%",
+    },
+  },
 }))
 
 const IndexPage = props => {
@@ -90,7 +104,13 @@ const IndexPage = props => {
       <SEO title="Home" />
 
       {/* <div className={classes.first}></div> */}
-      <img src={bgImgs} style={{ width: " 100%", height: "auto" }} />
+      <Hidden smUp>
+        <img src={bgImgsV} alt="georgian food" className={classes.imgFirst} />
+      </Hidden>
+
+      <Hidden xsDown>
+        <img src={bgImgs} alt="georgian food" className={classes.imgFirst} />
+      </Hidden>
 
       {/* <h1>Hi people</h1>
     <p>Welcome to your new Gatsby site.</p>
@@ -182,7 +202,10 @@ const IndexPage = props => {
   )
 }
 
-export default IndexPage
+IndexPage.propTypes = {
+  width: PropTypes.oneOf(["lg", "md", "sm", "xl", "xs"]).isRequired,
+}
+export default withWidth()(IndexPage)
 
 export const query = graphql`
   query {
