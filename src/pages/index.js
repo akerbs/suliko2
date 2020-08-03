@@ -4,7 +4,7 @@ import { Link, graphql, useStaticQuery } from "gatsby"
 import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
-import bgImg1600 from "../images/bgImg1600.gif"
+import bgImgs from "../images/bgImgs.gif"
 import img1 from "../images/1.jpg"
 import img2 from "../images/2.jpg"
 import Img from "gatsby-image"
@@ -43,13 +43,12 @@ const useStyles = makeStyles(theme => ({
   //   textAlign: "center",
   // },
   first: {
-    backgroundImage: `url(${bgImg1600})`,
+    backgroundImage: `url(${bgImgs})`,
     width: " 100%",
     height: "100vh",
     backgroundSize: "cover",
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
-    zIndex: -9999,
     // animation: "$bgImgs 5s ease-in-out infinite alternate ",
   },
   // "@keyframes bgImgs": {
@@ -60,19 +59,18 @@ const useStyles = makeStyles(theme => ({
   //     backgroundImage: `url(${img2})`,
   //   },
   // },
-  second: {
-    zIndex: -999,
-    display: "flex",
-    height: "100%",
-    // alignItems: "center",
-    color: "white",
-    background:
-      "radial-gradient(circle, rgba(255,255,255,0) 27%, rgba(0,0,0,0.9192051820728291) 80%)",
-    [theme.breakpoints.down("xs")]: {
-      background:
-        "radial-gradient(circle, rgba(255,255,255,0) 52%, rgba(0,0,0,0.9192051820728291) 95%)",
-    },
-  },
+  // second: {
+  //   display: "flex",
+  //   height: "100%",
+  //   // alignItems: "center",
+  //   color: "white",
+  //   background:
+  //     "radial-gradient(circle, rgba(255,255,255,0) 27%, rgba(0,0,0,0.9192051820728291) 80%)",
+  //   [theme.breakpoints.down("xs")]: {
+  //     background:
+  //       "radial-gradient(circle, rgba(255,255,255,0) 52%, rgba(0,0,0,0.9192051820728291) 95%)",
+  //   },
+  // },
 }))
 
 const IndexPage = props => {
@@ -81,9 +79,8 @@ const IndexPage = props => {
   return (
     <Layout>
       <SEO title="Home" />
-      <div className={classes.first}>
-        <div className={classes.second}>{/* <LangSwAkk /> */}</div>
-      </div>
+      <div className={classes.first}>{/* <LangSwAkk /> */}</div>
+
       {/* <h1>Hi people</h1>
     <p>Welcome to your new Gatsby site.</p>
     <p>Now go build something great.</p> */}
