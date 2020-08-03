@@ -18,10 +18,7 @@ import Carousel from "react-bootstrap/Carousel"
 import LangSwAkk from "../components/langSwAkk"
 
 const useStyles = makeStyles(theme => ({
-  root: {
-    display: "flex",
-    flexDirection: "column",
-  },
+  root: {},
   // bgImg: {
   //   width: " 100%",
   //   height: "100vh",
@@ -53,6 +50,7 @@ const useStyles = makeStyles(theme => ({
     backgroundSize: "cover",
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
+    float: "top",
     // animation: "$bgImgs 5s ease-in-out infinite alternate ",
   },
   // "@keyframes bgImgs": {
