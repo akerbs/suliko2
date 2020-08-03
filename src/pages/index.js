@@ -50,8 +50,11 @@ const useStyles = makeStyles(theme => ({
     backgroundSize: "cover",
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
-    float: "right",
+
     // animation: "$bgImgs 5s ease-in-out infinite alternate ",
+  },
+  text1: {
+    position: "relative",
   },
   // "@keyframes bgImgs": {
   //   "0%, 50%": {
@@ -119,7 +122,7 @@ const IndexPage = props => {
         {/* <Img fluid={props.data.img1.childImageSharp.fluid} alt="Georgian food" /> */}
         {/* <Img fluid={props.data.img2.childImageSharp.fluid} alt="Georgian food" /> */}
         {/* <img src={bgImg1600} alt="food" style={{}}/> */}
-        <div>
+        <div className={classes.text1}>
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium
           commodi earum possimus, odit laboriosam voluptatibus numquam labore
           quod, culpa optio exercitationem sint eveniet maxime quam amet
