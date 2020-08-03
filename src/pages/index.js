@@ -47,7 +47,7 @@ const useStyles = makeStyles(theme => ({
     left: 0,
     backgroundImage: `url(${bgImg1600})`,
 
-    width: " 100%",
+    width: " 100vw",
     height: "100vh",
     backgroundSize: "cover",
     backgroundPosition: "center",
@@ -66,7 +66,9 @@ const useStyles = makeStyles(theme => ({
     top: 0,
     left: 0,
     display: "flex",
-    height: "100%",
+
+    width: " 100vw",
+    height: "100vh",
     // alignItems: "center",
     color: "white",
     background:
