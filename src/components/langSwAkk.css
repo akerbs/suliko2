@@ -15,6 +15,15 @@
   position: fixed;
   font-family: Roboto, sans-serif;
 }
+@media screen and (max-width: 600px) {
+  .accordion {
+    margin-top: 60px;
+    margin-left: 0px;
+  }
+  .accordionItem {
+    color: white;
+  }
+}
 
 .accordionItem {
   /* border: 1px solid #f9eacf; */

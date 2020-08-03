@@ -64,7 +64,7 @@ const useStyles = makeStyles(theme => ({
   //   // animation: "$bgImgs 5s ease-in-out infinite alternate ",
   // },
   text1: {
-    width: "80%",
+    width: "70%",
     margin: "0 auto",
   },
   // "@keyframes bgImgs": {

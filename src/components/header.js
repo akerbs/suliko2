@@ -126,6 +126,23 @@ const useStyles = makeStyles(theme => ({
     ...theme.mixins.toolbar,
     justifyContent: "space-between",
   },
+  mediaIcons: {
+    display: "flex",
+  },
+  mediaIcon: {
+    paddingRight: 0,
+    // display: "block",
+    // textAlign: "center",
+    // paddingTop: 15,
+  },
+  navLink: {
+    // width: "100vw",
+    // color: "rgba(133,26,29)",
+    color: "#f9eacf",
+    "&:hover": {
+      color: "white",
+    },
+  },
   drawerItem: {
     textDecoration: "none",
     color: "#f9eacf",
@@ -157,14 +174,7 @@ const useStyles = makeStyles(theme => ({
     // }),
     marginRight: 0,
   },
-  navLink: {
-    // width: "100vw",
-    // color: "rgba(133,26,29)",
-    color: "#f9eacf",
-    "&:hover": {
-      color: "white",
-    },
-  },
+
   reservierenButton: {
     backgroundColor: "#f9eacf",
     // background: `url(${bgPatternImg}) `,
@@ -268,6 +278,34 @@ function Header() {
           }}
         >
           <div className={classes.drawerHeader}>
+            <div className={classes.mediaIcons}>
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://www.instagram.com/suliko_hamburg_"
+                className={classes.navLink}
+                //  onClick="this.blur()"
+              >
+                <ListItem
+                  button
+                  key={"instagram"}
+                  className={classes.mediaIcon}
+                >
+                  <FontAwesomeIcon icon={faInstagram} size="1x" />
+                </ListItem>
+              </a>
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://www.facebook.com/restaurant.suliko.hamburg"
+                className={classes.navLink}
+                //  onClick="this.blur()"
+              >
+                <ListItem button key={"facebook"} className={classes.mediaIcon}>
+                  <FontAwesomeIcon icon={faFacebook} size="1x" />
+                </ListItem>
+              </a>
+            </div>
             <CloseIcon style={{ color: "transparent" }} />
 
             {/* <div>
@@ -356,44 +394,6 @@ function Header() {
               />
             </ListItem>
           </Link>
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://www.instagram.com/suliko_hamburg_"
-            className={classes.navLink}
-            //  onClick="this.blur()"
-          >
-            <ListItem
-              button
-              key={"instagram"}
-              style={{
-                display: "block",
-                textAlign: "center",
-                paddingTop: 15,
-              }}
-            >
-              <FontAwesomeIcon icon={faInstagram} size="2x" />
-            </ListItem>
-          </a>
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://www.facebook.com/restaurant.suliko.hamburg"
-            className={classes.navLink}
-            //  onClick="this.blur()"
-          >
-            <ListItem
-              button
-              key={"facebook"}
-              style={{
-                display: "block",
-                textAlign: "center",
-                paddingTop: 15,
-              }}
-            >
-              <FontAwesomeIcon icon={faFacebook} size="2x" />
-            </ListItem>
-          </a>
 
           {/* </div> */}
           {/* </List> */}
