@@ -43,6 +43,7 @@ const useStyles = makeStyles(theme => ({
   //   textAlign: "center",
   // },
   first: {
+    zIndex: -999,
     top: 0,
     left: 0,
     backgroundImage: `url(${bgImg1600})`,
@@ -63,6 +64,7 @@ const useStyles = makeStyles(theme => ({
   //   },
   // },
   second: {
+    zIndex: -99,
     top: 0,
     left: 0,
     display: "flex",
