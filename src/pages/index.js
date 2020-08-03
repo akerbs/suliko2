@@ -90,7 +90,7 @@ const IndexPage = props => {
       <SEO title="Home" />
 
       {/* <div className={classes.first}></div> */}
-      <img src={bgImgs} />
+      <img src={bgImgs} style={{ width: " 100%", height: "auto" }} />
 
       {/* <h1>Hi people</h1>
     <p>Welcome to your new Gatsby site.</p>
