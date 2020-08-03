@@ -44,8 +44,8 @@ const useStyles = makeStyles(theme => ({
   //   textAlign: "center",
   // },
   first: {
-    position: "relative",
     backgroundImage: `url(${bgImgs})`,
+    backgroundAttachment: "fixed",
     width: " 100%",
     height: "100vh",
     backgroundSize: "cover",
