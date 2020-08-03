@@ -18,25 +18,25 @@ import Carousel from "react-bootstrap/Carousel"
 import LangSwAkk from "../components/langSwAkk"
 
 const useStyles = makeStyles(theme => ({
-  bgImg: {
-    width: " 100%",
-    height: "100vh",
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-    backgroundRepeat: "no-repeat",
-  },
-  blackOverlay: {
-    display: "flex",
-    height: "100%",
-    alignItems: "center",
-    color: "white",
-    background:
-      "radial-gradient(circle, rgba(255,255,255,0) 19%, rgba(0,0,0,0.9192051820728291) 68%)",
-    [theme.breakpoints.down("xs")]: {
-      background:
-        "radial-gradient(circle, rgba(255,255,255,0) 32%, rgba(0,0,0,0.773546918767507) 67%)",
-    },
-  },
+  // bgImg: {
+  //   width: " 100%",
+  //   height: "100vh",
+  //   backgroundSize: "cover",
+  //   backgroundPosition: "center",
+  //   backgroundRepeat: "no-repeat",
+  // },
+  // blackOverlay: {
+  //   display: "flex",
+  //   height: "100%",
+  //   alignItems: "center",
+  //   color: "white",
+  //   background:
+  //     "radial-gradient(circle, rgba(255,255,255,0) 19%, rgba(0,0,0,0.9192051820728291) 68%)",
+  //   [theme.breakpoints.down("xs")]: {
+  //     background:
+  //       "radial-gradient(circle, rgba(255,255,255,0) 32%, rgba(0,0,0,0.773546918767507) 67%)",
+  //   },
+  // },
   bgTextWrapper: {
     maxWidth: "700px",
     margin: "0 auto",
@@ -79,11 +79,9 @@ const IndexPage = props => {
   return (
     <Layout>
       <SEO title="Home" />
-      {/* <div className={classes.first}>
-        <div className={classes.second}>
-          <LangSwAkk />
-        </div>
-      </div> */}
+      <div className={classes.first}>
+        <div className={classes.second}>{/* <LangSwAkk /> */}</div>
+      </div>
       {/* <h1>Hi people</h1>
     <p>Welcome to your new Gatsby site.</p>
     <p>Now go build something great.</p> */}
@@ -105,7 +103,7 @@ const IndexPage = props => {
           />
         </Carousel.Item>
       </Carousel> */}
-      <BackgroundImage
+      {/* <BackgroundImage
         className={classes.bgImg}
         fluid={props.data.img2.childImageSharp.fluid}
         // fadeIn
@@ -115,11 +113,11 @@ const IndexPage = props => {
             <p>Text should be here</p>
           </div>
         </div>
-      </BackgroundImage>
+      </BackgroundImage> */}
       {/* <Img fluid={props.data.img1.childImageSharp.fluid} alt="Georgian food" /> */}
       {/* <Img fluid={props.data.img2.childImageSharp.fluid} alt="Georgian food" /> */}
       {/* <img src={bgImg1600} alt="food" style={{}}/> */}
-      <div>
+      {/* <div>
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium
         commodi earum possimus, odit laboriosam voluptatibus numquam labore
         quod, culpa optio exercitationem sint eveniet maxime quam amet
@@ -168,7 +166,7 @@ const IndexPage = props => {
         repellendus dolorum est quos placeat officiis eos. Ullam, consequatur
         inventore velit consectetur excepturi incidunt ipsum quaerat eius
         dolorem, placeat dolore?
-      </div>
+      </div> */}
     </Layout>
   )
 }

@@ -31,7 +31,7 @@ const Layout = ({ children }) => {
         <Header />
         {/* <LangSwAkk /> */}
         <main>{children}</main>
-        <Footer />
+        {/* <Footer /> */}
       </ThemeProvider>
     </div>
   )
