@@ -44,6 +44,7 @@ const useStyles = makeStyles(theme => ({
   //   textAlign: "center",
   // },
   first: {
+    position: "relative",
     backgroundImage: `url(${bgImgs})`,
     width: " 100%",
     height: "100vh",
