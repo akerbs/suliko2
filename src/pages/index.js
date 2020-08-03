@@ -19,7 +19,8 @@ import LangSwAkk from "../components/langSwAkk"
 
 const useStyles = makeStyles(theme => ({
   root: {
-    display: "block",
+    display: "flex",
+    flexDirection: "column",
   },
   // bgImg: {
   //   width: " 100%",
