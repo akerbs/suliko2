@@ -20,7 +20,9 @@ import LangSwAkk from "../components/langSwAkk"
 import Grid from "@material-ui/core/Grid"
 
 const useStyles = makeStyles(theme => ({
-  root: {},
+  root: {
+    backgroundColor: "#f9eacf",
+  },
   // bgImg: {
   //   width: " 100%",
   //   height: "100vh",
