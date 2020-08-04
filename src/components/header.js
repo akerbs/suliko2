@@ -75,8 +75,8 @@ const useStyles = makeStyles(theme => ({
       maxWidth: 440,
     },
     [theme.breakpoints.down("xs")]: {
-      maxWidth: 220,
-      paddingTop: 10,
+      maxWidth: 200,
+      paddingTop: 15,
       marginLeft: 10,
 
       marginBottom: -6,
@@ -88,7 +88,7 @@ const useStyles = makeStyles(theme => ({
   },
 
   openDrawerBtn: {
-    padding: 3,
+    padding: 1,
 
     margin: "10px 10px 0px 0px",
     // border: "1px solid black",
@@ -103,7 +103,7 @@ const useStyles = makeStyles(theme => ({
   },
 
   closeDrawerBtn: {
-    padding: 3,
+    padding: 1,
     margin: "10px 10px 0px 0px",
     // color: "white",
     color: "rgba(43,42,41)",
@@ -174,7 +174,6 @@ const useStyles = makeStyles(theme => ({
 }))
 
 function Header(props) {
-  console.log("Ref from props:", props.ref)
   const classes = useStyles()
   const theme = useTheme()
   const [open, setOpen] = React.useState(false)

@@ -5,7 +5,7 @@
   left: 20;
   /* margin-top: auto; */
   font-size: 14px;
-  width: 52px;
+  width: 47px;
   height: auto;
   margin-top: 10px;
   margin-left: -60px;
@@ -17,10 +17,11 @@
 }
 @media screen and (max-width: 600px) {
   .accordion {
-    bottom: 10px;
-    left: 70px;
-    /* margin-top: 60px;
-    margin-left: 0px; */
+    /* bottom: 10px; */
+    /* left: 70px; */
+    /* margin-top: 60px; */
+    /* margin-left: 0px; */
+    right: 60px;
   }
   .accordionItem {
     color: white;
@@ -30,7 +31,7 @@
 .accordionItem {
   /* border: 1px solid #f9eacf; */
   text-align: center;
-  padding: 1em 0;
+  padding: 0.85em 0;
   color: #f9eacf;
   border-radius: 30px;
   background-color: rgba(43, 42, 41);
