@@ -5,25 +5,17 @@ import Drawer from "@material-ui/core/Drawer"
 import AppBar from "@material-ui/core/AppBar"
 import Toolbar from "@material-ui/core/Toolbar"
 import CssBaseline from "@material-ui/core/CssBaseline"
-import List from "@material-ui/core/List"
 import Typography from "@material-ui/core/Typography"
-import Divider from "@material-ui/core/Divider"
 import IconButton from "@material-ui/core/IconButton"
 import MenuIcon from "@material-ui/icons/Menu"
-import ChevronLeftIcon from "@material-ui/icons/ChevronLeft"
-import ChevronRightIcon from "@material-ui/icons/ChevronRight"
 import ListItem from "@material-ui/core/ListItem"
-import ListItemIcon from "@material-ui/core/ListItemIcon"
 import ListItemText from "@material-ui/core/ListItemText"
-import InboxIcon from "@material-ui/icons/MoveToInbox"
-import MailIcon from "@material-ui/icons/Mail"
 import { ThemeProvider } from "@material-ui/core/styles"
 import { Link } from "gatsby"
 import Logo1Plus2 from "../images/Logo1Plus2.gif"
 import Logo1 from "../images/Logo1.gif"
 import Logo1x from "../images/logo2.gif"
 import Logo2 from "../images/Logo2.png"
-import Grid from "@material-ui/core/Grid"
 import withWidth from "@material-ui/core/withWidth"
 import Hidden from "@material-ui/core/Hidden"
 import PropTypes from "prop-types"
@@ -33,6 +25,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons"
 import LangSwAkk from "./langSwAkk"
 import Button from "@material-ui/core/Button"
+import { bgImgPosBb, bgImgPosBbV } from "../pages/index"
 
 const drawerWidth = "auto"
 
@@ -58,35 +51,24 @@ const useStyles = makeStyles(theme => ({
     alignItems: "flex-start",
     padding: 0,
     margin: 0,
-    // padding: "0px  20px 0px 10px",
-    // paddingLeft: 10,
-    // paddingRight: 10,
-    [theme.breakpoints.down("sm")]: {
-      // paddingLeft: 0,
-      // paddingRight: 10,
-    },
+    [theme.breakpoints.down("sm")]: {},
   },
 
   logo2Img: {
-    paddingTop: 3,
-    paddingBottom: 3,
-    marginBottom: 0,
-    maxWidth: 120,
-    // [theme.breakpoints.down("md")]: {},
+    paddingTop: 6,
+    paddingBottom: 0,
+    marginBottom: -2,
+    marginTop: 0,
+    maxWidth: 119,
     [theme.breakpoints.down("sm")]: {
       maxWidth: 110,
     },
-    // [theme.breakpoints.down("xs")]: {
-    //   maxWidth: 200,
-    // },
   },
 
   logoImg: {
-    // justifyContent: "center",
-    // alignSelf: "center",
-    paddingTop: 18,
+    paddingTop: 20,
     paddingBottom: 0,
-    marginBottom: 0,
+    marginBottom: -5,
     maxWidth: 490,
     [theme.breakpoints.down("md")]: {},
     [theme.breakpoints.down("sm")]: {
@@ -95,18 +77,48 @@ const useStyles = makeStyles(theme => ({
     [theme.breakpoints.down("xs")]: {
       maxWidth: 220,
       paddingTop: 5,
+
+      marginBottom: -6,
     },
   },
 
   hide: {
     display: "none",
   },
+
+  openDrawerBtn: {
+    padding: 3,
+
+    margin: "10px 10px 0px 0px",
+    // border: "1px solid black",
+    // color: "white",
+    color: "rgba(43,42,41)",
+    // backgroundColor: "white",
+    backgroundColor: "#f9eacf",
+    // backgroundColor: "white",
+    "&:hover": {
+      backgroundColor: "#f9eacf",
+    },
+  },
+
+  closeDrawerBtn: {
+    padding: 3,
+    margin: "10px 10px 0px 0px",
+    // color: "white",
+    color: "rgba(43,42,41)",
+    // backgroundColor: "white",
+    // backgroundColor: "#f9eacf",
+    backgroundColor: "#f9eacf",
+    "&:hover": {
+      backgroundColor: "#f9eacf",
+    },
+  },
+
   drawer: {
     width: drawerWidth,
     flexShrink: 0,
   },
   drawerPaper: {
-    // backgroundImage: `url(${bgPatternImg}) `,
     backgroundColor: "rgba(43,42,41)",
     // backgroundColor: "#f9eacf",
     // background: 'radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(255,255,255,1) 92%)',
@@ -114,14 +126,12 @@ const useStyles = makeStyles(theme => ({
     overflowX: "hidden",
     width: drawerWidth,
     height: "100vh",
-    // zIndex: 9999,
   },
   drawerHeader: {
     display: "flex",
     alignItems: "center",
     margin: 0,
     padding: 0,
-    // margin: "20px 20px 0px 0px",
     // necessary for content to be below app bar
     ...theme.mixins.toolbar,
     justifyContent: "space-between",
@@ -131,13 +141,8 @@ const useStyles = makeStyles(theme => ({
   },
   mediaIcon: {
     paddingRight: 0,
-    // display: "block",
-    // textAlign: "center",
-    // paddingTop: 15,
   },
   navLink: {
-    // width: "100vw",
-    // color: "rgba(133,26,29)",
     color: "#f9eacf",
     "&:hover": {
       color: "white",
@@ -160,8 +165,6 @@ const useStyles = makeStyles(theme => ({
 
   reservierenButton: {
     backgroundColor: "#f9eacf",
-    // background: `url(${bgPatternImg}) `,
-
     position: "fixed",
     bottom: 20,
     right: 20,
@@ -169,7 +172,8 @@ const useStyles = makeStyles(theme => ({
   },
 }))
 
-function Header() {
+function Header(props) {
+  console.log("Ref from props:", props.ref)
   const classes = useStyles()
   const theme = useTheme()
   const [open, setOpen] = React.useState(false)
@@ -185,15 +189,15 @@ function Header() {
 
   const listenScrollEvent = event => {
     if (window.innerWidth <= 600) {
-      if (window.scrollY < 368) {
+      if (window.scrollY < window.innerWidth * 1.2) {
         setColor("transparent")
-      } else if (window.scrollY > 365) {
+      } else {
         setColor("secondary")
       }
     } else {
-      if (window.scrollY < 645) {
+      if (window.scrollY < window.innerWidth * 0.548) {
         setColor("transparent")
-      } else if (window.scrollY > 648) {
+      } else {
         setColor("secondary")
       }
     }
@@ -220,6 +224,7 @@ function Header() {
           <Hidden smUp>
             <LangSwAkk />
           </Hidden>
+
           <Hidden xsDown>
             <Link to="/">
               <img src={Logo2} alt="logo" className={classes.logo2Img} />
@@ -234,28 +239,18 @@ function Header() {
               <img src={Logo1Plus2} alt="logo" className={classes.logoImg} />
             </Hidden>
           </Link>
+
           <div style={{ display: "flex", justifyContent: "column" }}>
             <Hidden xsDown>
               <LangSwAkk />
             </Hidden>
 
             <IconButton
-              style={{
-                padding: 3,
-                margin: "10px 10px 0px 0px",
-
-                border: "1px solid black",
-                // color: "white",
-                color: "rgba(43,42,41)",
-                // backgroundColor: "white",
-                backgroundColor: "#f9eacf",
-                // backgroundColor: "white",
-              }}
               size="small"
               aria-label="open drawer"
               // edge="end"
               onClick={handleDrawerOpen}
-              className={clsx(open && classes.hide)}
+              className={(clsx(open && classes.hide), classes.openDrawerBtn)}
             >
               <MenuIcon style={{ fontSize: 30, margin: 6 }} />
             </IconButton>
@@ -314,20 +309,12 @@ function Header() {
             </div> */}
           <IconButton
             // onClick={handleDrawerClose}
-            style={{
-              padding: 3,
-              margin: "10px 10px 0px 0px",
-              // color: "white",
-              color: "rgba(43,42,41)",
-              // backgroundColor: "white",
-              // backgroundColor: "#f9eacf",
-              backgroundColor: "#f9eacf",
-            }}
+
             size="small"
             aria-label="close drawer"
             edge="end"
             onClick={handleDrawerClose}
-            // className={clsx(open && classes.hide)}
+            className={(clsx(open && classes.hide), classes.closeDrawerBtn)}
           >
             <CloseIcon style={{ fontSize: 30, margin: 6 }} />
           </IconButton>
