@@ -56,7 +56,9 @@ const useStyles = makeStyles(theme => ({
     display: "flex",
     justifyContent: "space-between",
     alignItems: "flex-start",
-    padding: "20px  20px 0px 10px",
+    padding: 0,
+    margin: 0,
+    // padding: "0px  20px 0px 10px",
     // paddingLeft: 10,
     // paddingRight: 10,
     [theme.breakpoints.down("sm")]: {
@@ -69,7 +71,7 @@ const useStyles = makeStyles(theme => ({
     paddingTop: 3,
     paddingBottom: 3,
     marginBottom: 0,
-    maxWidth: 130,
+    maxWidth: 120,
     // [theme.breakpoints.down("md")]: {},
     [theme.breakpoints.down("sm")]: {
       maxWidth: 110,
@@ -82,10 +84,10 @@ const useStyles = makeStyles(theme => ({
   logoImg: {
     // justifyContent: "center",
     // alignSelf: "center",
-    paddingTop: 10,
+    paddingTop: 18,
     paddingBottom: 0,
     marginBottom: 0,
-    maxWidth: 480,
+    maxWidth: 490,
     [theme.breakpoints.down("md")]: {},
     [theme.breakpoints.down("sm")]: {
       maxWidth: 380,
@@ -117,8 +119,9 @@ const useStyles = makeStyles(theme => ({
   drawerHeader: {
     display: "flex",
     alignItems: "center",
-
-    margin: "20px 20px 0px 0px",
+    margin: 0,
+    padding: 0,
+    // margin: "20px 20px 0px 0px",
     // necessary for content to be below app bar
     ...theme.mixins.toolbar,
     justifyContent: "space-between",
@@ -188,9 +191,9 @@ function Header() {
         setColor("secondary")
       }
     } else {
-      if (window.scrollY < 615) {
+      if (window.scrollY < 645) {
         setColor("transparent")
-      } else if (window.scrollY > 618) {
+      } else if (window.scrollY > 648) {
         setColor("secondary")
       }
     }
@@ -239,8 +242,9 @@ function Header() {
             <LangSwAkk />
             <IconButton
               style={{
-                paddingLeft: 5,
-                marginRight: 0,
+                padding: 3,
+                margin: "10px 10px 0px 0px",
+
                 border: "1px solid black",
                 // color: "white",
                 color: "rgba(43,42,41)",
@@ -284,23 +288,23 @@ function Header() {
             <a
               target="_blank"
               rel="noopener noreferrer"
-              href="https://www.instagram.com/suliko_hamburg_"
-              className={classes.navLink}
-              //  onClick="this.blur()"
-            >
-              <ListItem button key={"instagram"} className={classes.mediaIcon}>
-                <FontAwesomeIcon icon={faInstagram} size="1x" />
-              </ListItem>
-            </a>
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
               href="https://www.facebook.com/restaurant.suliko.hamburg"
               className={classes.navLink}
               //  onClick="this.blur()"
             >
               <ListItem button key={"facebook"} className={classes.mediaIcon}>
                 <FontAwesomeIcon icon={faFacebook} size="1x" />
+              </ListItem>
+            </a>
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://www.instagram.com/suliko_hamburg_"
+              className={classes.navLink}
+              //  onClick="this.blur()"
+            >
+              <ListItem button key={"instagram"} className={classes.mediaIcon}>
+                <FontAwesomeIcon icon={faInstagram} size="1x" />
               </ListItem>
             </a>
           </div>
@@ -312,8 +316,8 @@ function Header() {
           <IconButton
             // onClick={handleDrawerClose}
             style={{
-              paddingLeft: 5,
-              marginRight: 0,
+              padding: 3,
+              margin: "10px 10px 0px 0px",
               // color: "white",
               color: "rgba(43,42,41)",
               // backgroundColor: "white",
