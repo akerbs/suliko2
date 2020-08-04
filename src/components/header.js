@@ -287,7 +287,7 @@ function Header(props) {
               //  onClick="this.blur()"
             >
               <ListItem button key={"facebook"} className={classes.mediaIcon}>
-                <FontAwesomeIcon icon={faFacebook} size="1x" />
+                <FontAwesomeIcon icon={faFacebook} size="2x" />
               </ListItem>
             </a>
             <a
@@ -298,7 +298,7 @@ function Header(props) {
               //  onClick="this.blur()"
             >
               <ListItem button key={"instagram"} className={classes.mediaIcon}>
-                <FontAwesomeIcon icon={faInstagram} size="1x" />
+                <FontAwesomeIcon icon={faInstagram} size="2x" />
               </ListItem>
             </a>
           </div>
@@ -312,7 +312,7 @@ function Header(props) {
 
             size="small"
             aria-label="close drawer"
-            edge="end"
+            // edge="end"
             onClick={handleDrawerClose}
             className={(clsx(open && classes.hide), classes.closeDrawerBtn)}
           >
