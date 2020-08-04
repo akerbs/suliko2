@@ -217,15 +217,14 @@ function Header() {
         })}
       >
         <Toolbar className={classes.toolbar}>
+          <Hidden smUp>
+            <LangSwAkk />
+          </Hidden>
           <Hidden xsDown>
             <Link to="/">
               <img src={Logo2} alt="logo" className={classes.logo2Img} />
             </Link>
           </Hidden>
-
-          {/* <Hidden smUp>
-              <LangSwAkk />
-            </Hidden> */}
 
           <Link to="/">
             <Hidden smUp>
@@ -236,10 +235,10 @@ function Header() {
             </Hidden>
           </Link>
           <div style={{ display: "flex", justifyContent: "column" }}>
-            {/* <Hidden xsDown>
-                <LangSwAkk />
-              </Hidden> */}
-            <LangSwAkk />
+            <Hidden xsDown>
+              <LangSwAkk />
+            </Hidden>
+
             <IconButton
               style={{
                 padding: 3,

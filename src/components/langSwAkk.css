@@ -17,8 +17,9 @@
 }
 @media screen and (max-width: 600px) {
   .accordion {
-    margin-top: 65px;
-    margin-left: 0px;
+    bottom: 10px;
+    /* margin-top: 60px; */
+    margin-left: 10px;
   }
   .accordionItem {
     color: white;
