@@ -60,14 +60,19 @@ const IndexPage = props => {
       <SEO title="Home" />
       {/* <div className={classes.first}></div> */}
       <Hidden smUp>
-      {/* <picture>
-       <source srcset="/path/to/image.webp" type="image/webp">
-       <img src="/path/to/image.jpg" alt="insert alt text here">
-      </picture> */}
-        <img src={imgs1ovV} alt="georgian food" className={classes.imgFirst} />
+     
+      <picture>
+        <source srcset={imgs1ovV} type="image/webp" className={classes.imgFirst} />
+        <img src={bgImgsV} alt="georgian food" className={classes.imgFirst} />
+      </picture>
+     
       </Hidden>
       <Hidden xsDown>
-        <img src={imgs1ov} alt="georgian food" className={classes.imgFirst} />
+       <picture>
+        <source srcset={imgs1ov} type="image/webp" className={classes.imgFirst} />
+        <img src={bgImgs} alt="georgian food" className={classes.imgFirst} />
+      </picture>
+      
       </Hidden>
 
       <div className={classes.text1}>
