@@ -24,6 +24,8 @@ const useStyles = makeStyles(theme => ({
     margin: "0 auto",
   },
   imgFirst: {
+     width: " 100%",
+      height: "100%",
     [theme.breakpoints.down("xs")]: {
       // transform: "rotate(90deg)",
       // width: " 100%",
@@ -58,6 +60,10 @@ const IndexPage = props => {
       <SEO title="Home" />
       {/* <div className={classes.first}></div> */}
       <Hidden smUp>
+      {/* <picture>
+       <source srcset="/path/to/image.webp" type="image/webp">
+       <img src="/path/to/image.jpg" alt="insert alt text here">
+      </picture> */}
         <img src={imgs1ovV} alt="georgian food" className={classes.imgFirst} />
       </Hidden>
       <Hidden xsDown>
