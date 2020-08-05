@@ -26,6 +26,7 @@ const useStyles = makeStyles(theme => ({
     margin: "0 auto",
   },
   imgFirst: {
+    zIndex: -999,
     width: " 100%",
     height: "100vh",
     backgroundSize: "cover",
@@ -35,6 +36,7 @@ const useStyles = makeStyles(theme => ({
   
   },
    imgFirstV: {
+      zIndex: -999,
     width: " 100%",
     height: "100vh",
     backgroundSize: "cover",
@@ -44,6 +46,7 @@ const useStyles = makeStyles(theme => ({
   
   },
   overlay : {
+     zIndex: -99,
   display: "flex",
     height: "100%",
     alignItems: "center",
