@@ -27,7 +27,7 @@ const useStyles = makeStyles(theme => ({
   },
   imgFirst: {
     width: " 100vw",
-    height: "auto",
+    height: "100%",
     [theme.breakpoints.down("xs")]: {},
   },
 }))
