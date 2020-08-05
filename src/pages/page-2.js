@@ -32,7 +32,7 @@ const SecondPage = () => {
     <Layout>
       <SEO title="Page two" />
 
-      <picture>
+      {/* <picture>
         <source
           srcset={window.innerWidth <= 600 ? imgs1ovV : imgs1ov}
           type="image/webp"
@@ -43,7 +43,7 @@ const SecondPage = () => {
           alt="georgian food"
           className={classes.imgFirst}
         />
-      </picture>
+      </picture> */}
       {/* </Hidden> */}
       <h1>Hi from the second page</h1>
       <p>Welcome to page 2</p>
