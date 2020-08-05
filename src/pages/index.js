@@ -21,15 +21,15 @@ const useStyles = makeStyles(theme => ({
     backgroundColor: "#f9eacf",
   },
 
-  text1: {
-    width: "70%",
-    margin: "0 auto",
-  },
-  imgFirst: {
-    width: " 100%",
-    height: "auto",
-    [theme.breakpoints.down("xs")]: {},
-  },
+  // text1: {
+  //   width: "70%",
+  //   margin: "0 auto",
+  // },
+  // imgFirst: {
+  //   width: " 100%",
+  //   height: "auto",
+  //   [theme.breakpoints.down("xs")]: {},
+  // },
 }))
 
 const IndexPage = props => {
@@ -39,7 +39,7 @@ const IndexPage = props => {
     <Layout>
       <SEO title="Home" />
 
-      <Hidden smUp>
+      {/* <Hidden smUp>
         <picture>
           <source
             srcset={imgs1ovV}
@@ -59,7 +59,32 @@ const IndexPage = props => {
           />
           <img src={bgImgs} alt="georgian food" className={classes.imgFirst} />
         </picture>
-      </Hidden>
+      </Hidden> */}
+      <picture style={{ width: "100vw", height: "auto" }}>
+        <source
+          media="(max-width: 599px)"
+          srcset={imgs1ovV}
+          type="image/webp"
+          style={{ width: "100vw", height: "auto" }}
+        />
+        <source
+          media="(min-width: 600px)"
+          srcset={imgs1ov}
+          type="image/webp"
+          style={{ width: "100vw", height: "auto" }}
+        />
+        <source
+          media="(min-width: 600px)"
+          srcset={bgImgs}
+          style={{ width: "100vw", height: "auto" }}
+        />
+
+        <img
+          src={bgImgsV}
+          alt="georgian food"
+          style={{ width: "100vw", height: "auto" }}
+        />
+      </picture>
 
       <p>
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium
@@ -125,11 +150,11 @@ const IndexPage = props => {
     </Layout>
   )
 }
-
-IndexPage.propTypes = {
-  width: PropTypes.oneOf(["lg", "md", "sm", "xl", "xs"]).isRequired,
-}
-export default withWidth()(IndexPage)
+export default IndexPage
+// IndexPage.propTypes = {
+//   width: PropTypes.oneOf(["lg", "md", "sm", "xl", "xs"]).isRequired,
+// }
+// export default withWidth()(IndexPage)
 
 // export const query = graphql`
 //   query {
