@@ -70,7 +70,7 @@ const Footer = () => {
         {/* <Typography variant="body2">All Rights Reserved</Typography> */}
       </Typography>
 
-      {/* Created by{" "}
+      {/* Designed by{" "}
           <Link
             target="_blank"
             rel="noopener noreferrer"
