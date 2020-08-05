@@ -14,8 +14,10 @@ import PropTypes from "prop-types"
 import sloganImg2 from "../images/slogan_eng2.png"
 import Container from "@material-ui/core/Container"
 import Typography from "@material-ui/core/Typography"
-
-import Header from "../components/header"
+import "slick-carousel/slick/slick.css"
+import "slick-carousel/slick/slick-theme.css"
+import Slider from "react-slick"
+import Img from "gatsby-image"
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -25,6 +27,51 @@ const useStyles = makeStyles(theme => ({
 
 const IndexPage = props => {
   const classes = useStyles()
+
+  const settings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    initialSlide: 0,
+    autoplay: true,
+    speed: 4000,
+    autoplaySpeed: 2000,
+    cssEase: "linear",
+    pauseOnHover: true,
+    className: "center",
+    centerPadding: "60px",
+    swipeToSlide: true,
+
+    rtl: true,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  }
 
   return (
     <Layout>
@@ -66,21 +113,20 @@ const IndexPage = props => {
         >
           Liebe
         </p> */}
+        <br /> <br /> <br /> <br /> <br /> <br />
         <Container id="abount us">
-          <Typography
-            variant="h6"
-            align="center"
+          <img
             data-sal="zoom-in"
             data-sal-delay="300"
             data-sal-easing="ease"
+            src={sloganImg2}
+            alt="slogan"
             style={{
               display: "block",
               zIndex: 999,
             }}
-          >
-            Das Essen, das zu Ihrem Lebensstil passt
-          </Typography>
-          <br />
+          />
+
           <Typography
             variant="body1"
             style={{ lineHeight: 1.5 }}
@@ -102,7 +148,7 @@ const IndexPage = props => {
             festlichen Anlässe oder / und einfachen Abend mit Freunden und
             Familie oder einem romantischen Abend zur Zweit zur Seite stehen und
             machen für Sie ein individuelles Angebot, das zu Ihrem Lebensstil
-            passt. ...
+            passt...
             <Link
               to="/deu/about-us"
               className={classes.navLink}
@@ -113,6 +159,22 @@ const IndexPage = props => {
           </Typography>
         </Container>
         <br /> <br />
+        <div id="carousel">
+          <Slider {...settings}>
+            <div>
+              <Img fluid={props.data.s1.childImageSharp.fluid} alt="Suliko 1" />
+            </div>
+            <div>
+              <Img fluid={props.data.s2.childImageSharp.fluid} alt="Suliko 2" />
+            </div>
+            <div>
+              <Img fluid={props.data.s3.childImageSharp.fluid} alt="Suliko 3" />
+            </div>
+            <div>
+              <Img fluid={props.data.s4.childImageSharp.fluid} alt="Suliko 4" />
+            </div>
+          </Slider>
+        </div>
         <p>
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium
           commodi earum possimus, odit laboriosam voluptatibus numquam labore
@@ -164,19 +226,41 @@ const IndexPage = props => {
           velit consectetur excepturi incidunt ipsum quaerat eius dolorem,
           placeat dolore?
         </p>
-        <img
-          data-sal="zoom-in"
-          data-sal-delay="300"
-          data-sal-easing="ease"
-          src={sloganImg2}
-          alt="slogan"
-          style={{
-            display: "block",
-            zIndex: 999,
-          }}
-        />
       </Container>
     </Layout>
   )
 }
 export default IndexPage
+
+export const query = graphql`
+  query {
+    s1: file(relativePath: { eq: "s1.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2000) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    s2: file(relativePath: { eq: "s2.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2000) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    s3: file(relativePath: { eq: "s3.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2000) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    s4: file(relativePath: { eq: "s4.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2000) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`
