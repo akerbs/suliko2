@@ -52,7 +52,7 @@ const useStyles = makeStyles(theme => ({
     alignItems: "center",
     color: "white",
     background:
-      "radial-gradient(circle, rgba(255,255,255,0) 19%, rgba(0,0,0,0.9192051820728291) 68%)",
+      "radial-gradient(circle, rgba(255,255,255,0) 69%, rgba(0,0,0,0.9192051820728291) 80%)",
     [theme.breakpoints.down("xs")]: {
       background:
         "radial-gradient(circle, rgba(255,255,255,0) 32%, rgba(0,0,0,0.773546918767507) 67%)",
