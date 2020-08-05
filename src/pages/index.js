@@ -50,10 +50,12 @@ const useStyles = makeStyles(theme => ({
     marginTop: -150,
   },
   phoneEmailLink: {
-    color: " black",
+    color: " rgba(255,255,255)",
     textDecoration: "none",
+
     "&:hover": {
-      color: "white",
+      color: "rgba(133,26,29)",
+      textShadow: "rgba(255,255,255) 0 0 5px",
     },
   },
 }))
@@ -225,7 +227,7 @@ const IndexPage = props => {
         </Container>
         <br />
         <br />
-        <Container id="contact" style={{ padding: 0, margin: 0 }}>
+        <Container id="contact" style={{ paddingRight: 0, paddingLeft: 0 }}>
           <Container
             style={{
               // background: "rgba(123,26,29, 0.3)",
