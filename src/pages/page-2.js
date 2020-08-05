@@ -32,18 +32,27 @@ const SecondPage = () => {
     <Layout>
       <SEO title="Page two" />
 
-      {/* <picture>
+      <picture>
         <source
-          srcset={window.innerWidth <= 600 ? imgs1ovV : imgs1ov}
+          media="(max-width: 599px)"
+          srcset={imgs1ovV}
           type="image/webp"
           className={classes.imgFirst}
         />
-        <img
-          src={window.innerWidth <= 600 ? bgImgsV : bgImgs}
-          alt="georgian food"
+        <source
+          media="(min-width: 600px)"
+          srcset={imgs1ov}
+          type="image/webp"
           className={classes.imgFirst}
         />
-      </picture> */}
+        <source
+          media="(min-width: 600px)"
+          srcset={bgImgs}
+          className={classes.imgFirst}
+        />
+
+        <img src={bgImgsV} alt="georgian food" className={classes.imgFirst} />
+      </picture>
       {/* </Hidden> */}
       <h1>Hi from the second page</h1>
       <p>Welcome to page 2</p>

@@ -62,15 +62,24 @@ const IndexPage = props => {
       </Hidden> */}
       <picture>
         <source
-          srcset={global.innerWidth <= 600 ? imgs1ovV : imgs1ov}
+          media="(max-width: 599px)"
+          srcset={imgs1ovV}
           type="image/webp"
           className={classes.imgFirst}
         />
-        <img
-          src={global.innerWidth <= 600 ? bgImgsV : bgImgs}
-          alt="georgian food"
+        <source
+          media="(min-width: 600px)"
+          srcset={imgs1ov}
+          type="image/webp"
           className={classes.imgFirst}
         />
+        <source
+          media="(min-width: 600px)"
+          srcset={bgImgs}
+          className={classes.imgFirst}
+        />
+
+        <img src={bgImgsV} alt="georgian food" className={classes.imgFirst} />
       </picture>
 
       <p>
@@ -137,7 +146,6 @@ const IndexPage = props => {
     </Layout>
   )
 }
-
 export default IndexPage
 
 // IndexPage.propTypes = {
