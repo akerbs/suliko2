@@ -32,26 +32,30 @@ const SecondPage = () => {
     <Layout>
       <SEO title="Page two" />
 
-      <picture>
+      <picture style={{ width: "100vw", height: "auto" }}>
         <source
           media="(max-width: 599px)"
           srcset={imgs1ovV}
           type="image/webp"
-          className={classes.imgFirst}
+          style={{ width: "100vw", height: "auto" }}
         />
         <source
           media="(min-width: 600px)"
           srcset={imgs1ov}
           type="image/webp"
-          className={classes.imgFirst}
+          style={{ width: "100vw", height: "auto" }}
         />
         <source
           media="(min-width: 600px)"
           srcset={bgImgs}
-          className={classes.imgFirst}
+          style={{ width: "100vw", height: "auto" }}
         />
 
-        <img src={bgImgsV} alt="georgian food" className={classes.imgFirst} />
+        <img
+          src={bgImgsV}
+          alt="georgian food"
+          style={{ width: "100vw", height: "auto" }}
+        />
       </picture>
       {/* </Hidden> */}
       <h1>Hi from the second page</h1>
@@ -120,7 +124,7 @@ const SecondPage = () => {
         ipsum dolor, sit amet consectetur adipisicing elit.
       </p>
 
-      {/* <img
+      <img
         data-sal="flip-up"
         data-sal-delay="300"
         data-sal-easing="ease"
@@ -129,7 +133,7 @@ const SecondPage = () => {
         style={{
           display: "block",
         }}
-      /> */}
+      />
     </Layout>
   )
 }
