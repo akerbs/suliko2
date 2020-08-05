@@ -18,10 +18,43 @@ import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
 import Slider from "react-slick"
 import Img from "gatsby-image"
+import HomeIcon from "@material-ui/icons/Home"
+import PhoneIcon from "@material-ui/icons/Phone"
+import EmailIcon from "@material-ui/icons/Email"
+import ScheduleIcon from "@material-ui/icons/Schedule"
 
 const useStyles = makeStyles(theme => ({
   root: {
     backgroundColor: "#f9eacf",
+  },
+  container: {
+    position: "relative",
+    overflow: "hidden",
+    height: 300,
+    width: "100%",
+    paddingTop: "50%",
+    [theme.breakpoints.down("xs")]: {
+      paddingTop: "100%",
+    },
+  },
+
+  responsiveIframe: {
+    position: "absolute",
+    top: 0,
+    left: 0,
+    bottom: 0,
+    right: 0,
+    width: "100%",
+    height: 600,
+    border: 0,
+    marginTop: -150,
+  },
+  phoneEmailLink: {
+    color: " black",
+    textDecoration: "none",
+    "&:hover": {
+      color: "white",
+    },
   },
 }))
 
@@ -31,13 +64,12 @@ const IndexPage = props => {
   const settings = {
     dots: false,
     infinite: true,
-    speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
     initialSlide: 0,
     autoplay: true,
     speed: 4000,
-    autoplaySpeed: 2000,
+    autoplaySpeed: 4000,
     cssEase: "linear",
     pauseOnHover: true,
     className: "center",
@@ -159,73 +191,93 @@ const IndexPage = props => {
           </Typography>
         </Container>
         <br /> <br />
-        <div id="carousel">
+        <Container id="carousel">
           <Slider {...settings}>
             <div>
-              <Img fluid={props.data.s1.childImageSharp.fluid} alt="Suliko 1" />
+              <Img
+                fluid={props.data.s1.childImageSharp.fluid}
+                alt="Suliko 1"
+                style={{ margin: 1 }}
+              />
             </div>
             <div>
-              <Img fluid={props.data.s2.childImageSharp.fluid} alt="Suliko 2" />
+              <Img
+                fluid={props.data.s2.childImageSharp.fluid}
+                alt="Suliko 2"
+                style={{ margin: 1 }}
+              />
             </div>
             <div>
-              <Img fluid={props.data.s3.childImageSharp.fluid} alt="Suliko 3" />
+              <Img
+                fluid={props.data.s3.childImageSharp.fluid}
+                alt="Suliko 3"
+                style={{ margin: 1 }}
+              />
             </div>
             <div>
-              <Img fluid={props.data.s4.childImageSharp.fluid} alt="Suliko 4" />
+              <Img
+                fluid={props.data.s4.childImageSharp.fluid}
+                alt="Suliko 4"
+                style={{ margin: 1 }}
+              />
             </div>
           </Slider>
-        </div>
-        <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium
-          commodi earum possimus, odit laboriosam voluptatibus numquam labore
-          quod, culpa optio exercitationem sint eveniet maxime quam amet
-          voluptates nesciunt blanditiis dignissimos repellendus dolorum est
-          quos placeat officiis eos. Ullam, consequatur inventore velit
-          consectetur excepturi incidunt ipsum quaerat eius dolorem, placeat
-          dolore? Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-          Praesentium commodi earum possimus, odit laboriosam voluptatibus
-          numquam labore quod, culpa optio exercitationem sint eveniet maxime
-          quam amet voluptates nesciunt blanditiis dignissimos repellendus
-          dolorum est quos placeat officiis eos. Ullam, consequatur inventore
-          velit consectetur excepturi incidunt ipsum quaerat eius dolorem,
-          placeat dolore? Lorem ipsum dolor, sit amet consectetur adipisicing
-          elit. Praesentium commodi earum possimus, odit laboriosam voluptatibus
-          numquam labore quod, culpa optio exercitationem sint eveniet maxime
-          quam amet voluptates nesciunt blanditiis dignissimos repellendus
-          dolorum est quos placeat officiis eos. Ullam, consequatur inventore
-          velit consectetur excepturi incidunt ipsum quaerat eius dolorem,
-          placeat dolore? Lorem ipsum dolor, sit amet consectetur adipisicing
-          elit.Praesentium commodi earum possimus, odit laboriosam voluptatibus
-          numquam labore quod, culpa optio exercitationem sint eveniet maxime
-          quam amet voluptates nesciunt blanditiis dignissimos repellendus
-          dolorum est quos placeat officiis eos. Ullam, consequatur inventore
-          velit consectetur excepturi incidunt ipsum quaerat eius dolorem,
-          placeat dolore? Lorem ipsum dolor, sit amet consectetur adipisicing
-          elit. Praesentium commodi earum possimus, odit laboriosam voluptatibus
-          numquam labore quod, culpa optio exercitationem sint eveniet maxime
-          quam amet voluptates nesciunt blanditiis dignissimos repellendus
-          dolorum est quos placeat officiis eos. Ullam, consequatur inventore
-          velit consectetur excepturi incidunt ipsum quaerat eius dolorem,
-          placeat dolore? Lorem ipsum dolor, sit amet consectetur adipisicing
-          elit. Praesentium commodi earum possimus, odit laboriosam voluptatibus
-          numquam labore quod, culpa optio exercitationem sint eveniet maxime
-          quam amet voluptates nesciunt blanditiis dignissimos repellendus
-          dolorum est quos placeat officiis eos. Ullam, consequatur inventore
-          velit consectetur excepturi incidunt ipsum quaerat eius dolorem,
-          placeat dolore? Lorem ipsum dolor, sit amet consectetur adipisicing
-          elit. Praesentium commodi earum possimus, odit laboriosam voluptatibus
-          numquam labore quod, culpa optio exercitationem sint eveniet maxime
-          quam amet voluptates nesciunt blanditiis dignissimos repellendus
-          dolorum est quos placeat officiis eos. Ullam, consequatur inventore
-          velit consectetur excepturi incidunt ipsum quaerat eius dolorem,
-          placeat dolore? Lorem ipsum dolor, sit amet consectetur adipisicing
-          elit. Praesentium commodi earum possimus, odit laboriosam voluptatibus
-          numquam labore quod, culpa optio exercitationem sint eveniet maxime
-          quam amet voluptates nesciunt blanditiis dignissimos repellendus
-          dolorum est quos placeat officiis eos. Ullam, consequatur inventore
-          velit consectetur excepturi incidunt ipsum quaerat eius dolorem,
-          placeat dolore?
-        </p>
+        </Container>
+        <br />
+        <br />
+        <Container id="contact" style={{ padding: 0, margin: 0 }}>
+          {/* <Container
+            style={{
+              // background: "rgba(123,26,29, 0.3)",
+              background: "rgba(255,255,255, 0.5",
+              padding: "50px 15px 10px 15px",
+              marginTop: 50,
+              borderRadius: 10,
+            }}
+          > */}
+          <Typography
+            variant="body1"
+            align="center"
+            style={{ lineHeight: 2 }}
+            color="secondary"
+          >
+            <HomeIcon style={{ fontSize: 20 }} /> Mittelweg 24, 20148 Hamburg
+            <br />
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="tel:+4904049201953"
+              className={classes.phoneEmailLink}
+              //  onClick="this.blur()"
+            >
+              <PhoneIcon style={{ fontSize: 20 }} /> +49(0)40 49201953
+            </a>
+            <br />
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="mailto:info@restaurant-suliko.de"
+              className={classes.phoneEmailLink}
+              //  onClick="this.blur()"
+            >
+              <EmailIcon style={{ fontSize: 20 }} /> info@restaurant-suliko.de
+            </a>
+            <br /> <br />
+            <ScheduleIcon style={{ fontSize: 20 }} /> Öffnungszeiten <br />
+            Mo- Do 12:00 - 15:00, 17:00 - 22:00 <br />
+            Fr 12:00 - 15:00, 17:00 - 24:00 <br />
+            Sa 17:00 - 24:00 <br />
+            Son 15:00 - 22:00 <br />
+            <br />
+          </Typography>
+          <Container className={classes.container}>
+            <iframe
+              className={classes.responsiveIframe}
+              src="https://www.google.com/maps/d/u/0/embed?mid=1UQMf_-g-DjVCWRAkAVCDWjVNGXkvW4xc"
+            ></iframe>
+          </Container>
+          {/* </Container> */}
+        </Container>
       </Container>
     </Layout>
   )
