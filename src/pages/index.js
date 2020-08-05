@@ -38,18 +38,6 @@ const IndexPage = props => {
   return (
     <Layout>
       <SEO title="Home" />
-      <picture>
-        <source
-          srcset={window.innerWidth <= 600 ? imgs1ovV : imgs1ov}
-          type="image/webp"
-          className={classes.imgFirst}
-        />
-        <img
-          src={window.innerWidth <= 600 ? bgImgsV : bgImgs}
-          alt="georgian food"
-          className={classes.imgFirst}
-        />
-      </picture>
 
       {/* <Hidden smUp>
         <picture>
@@ -61,6 +49,7 @@ const IndexPage = props => {
           <img src={bgImgsV} alt="georgian food" className={classes.imgFirst} />
         </picture>
       </Hidden>
+
       <Hidden xsDown>
         <picture>
           <source
@@ -71,6 +60,18 @@ const IndexPage = props => {
           <img src={bgImgs} alt="georgian food" className={classes.imgFirst} />
         </picture>
       </Hidden> */}
+      <picture>
+        <source
+          srcset={global.innerWidth <= 600 ? imgs1ovV : imgs1ov}
+          type="image/webp"
+          className={classes.imgFirst}
+        />
+        <img
+          src={global.innerWidth <= 600 ? bgImgsV : bgImgs}
+          alt="georgian food"
+          className={classes.imgFirst}
+        />
+      </picture>
 
       <p>
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium
@@ -136,6 +137,7 @@ const IndexPage = props => {
     </Layout>
   )
 }
+
 export default IndexPage
 
 // IndexPage.propTypes = {
