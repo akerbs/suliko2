@@ -65,21 +65,11 @@ const IndexPage = () => {
           media="(max-width: 599px)"
           srcset={imgs1ovV}
           type="image/webp"
-          className={classes.imgFirst}
         />
-        <source
-          media="(min-width: 600px)"
-          srcset={imgs1ov}
-          type="image/webp"
-          className={classes.imgFirst}
-        />
-        <source
-          media="(min-width: 600px)"
-          srcset={bgImgs}
-          className={classes.imgFirst}
-        />
+        <source media="(min-width: 600px)" srcset={imgs1ov} type="image/webp" />
+        <source media="(min-width: 600px)" srcset={bgImgs} />
 
-        <img src={bgImgsV} alt="georgian food" className={classes.imgFirst} />
+        <img src={bgImgsV} alt="georgian food" />
       </picture>
 
       <p>
