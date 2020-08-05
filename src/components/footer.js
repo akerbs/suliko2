@@ -41,19 +41,11 @@ const useStyles = makeStyles(theme => ({
   //   },
   // },
   logo2Img: {
-    // paddingTop: 3,
-    // paddingBottom: 3,
-    // marginBottom: 0,
-
     margin: "0 auto",
     maxWidth: 130,
-    // [theme.breakpoints.down("md")]: {},
     [theme.breakpoints.down("sm")]: {
       maxWidth: 110,
     },
-    // [theme.breakpoints.down("xs")]: {
-    //   maxWidth: 200,
-    // },
   },
 }))
 
