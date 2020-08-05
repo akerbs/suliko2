@@ -20,16 +20,6 @@ const useStyles = makeStyles(theme => ({
   root: {
     backgroundColor: "#f9eacf",
   },
-
-  // text1: {
-  //   width: "70%",
-  //   margin: "0 auto",
-  // },
-  // imgFirst: {
-  //   width: " 100%",
-  //   height: "auto",
-  //   [theme.breakpoints.down("xs")]: {},
-  // },
 }))
 
 const IndexPage = props => {
@@ -38,28 +28,6 @@ const IndexPage = props => {
   return (
     <Layout>
       <SEO title="Home" />
-
-      {/* <Hidden smUp>
-        <picture>
-          <source
-            srcset={imgs1ovV}
-            type="image/webp"
-            className={classes.imgFirst}
-          />
-          <img src={bgImgsV} alt="georgian food" className={classes.imgFirst} />
-        </picture>
-      </Hidden>
-
-      <Hidden xsDown>
-        <picture>
-          <source
-            srcset={imgs1ov}
-            type="image/webp"
-            className={classes.imgFirst}
-          />
-          <img src={bgImgs} alt="georgian food" className={classes.imgFirst} />
-        </picture>
-      </Hidden> */}
       <picture style={{ width: "100vw", height: "auto" }}>
         <source
           media="(max-width: 599px)"
@@ -151,40 +119,3 @@ const IndexPage = props => {
   )
 }
 export default IndexPage
-// IndexPage.propTypes = {
-//   width: PropTypes.oneOf(["lg", "md", "sm", "xl", "xs"]).isRequired,
-// }
-// export default withWidth()(IndexPage)
-
-// export const query = graphql`
-//   query {
-//     img1: file(relativePath: { eq: "1.jpg" }) {
-//       childImageSharp {
-//         fluid(maxWidth: 4000) {
-//           ...GatsbyImageSharpFluid
-//         }
-//       }
-//     }
-//     img2: file(relativePath: { eq: "2.jpg" }) {
-//       childImageSharp {
-//         fluid(maxWidth: 4000) {
-//           ...GatsbyImageSharpFluid
-//         }
-//       }
-//     }
-//   }
-// `
-// export const bgQuery = graphql`
-//   query {
-//     backgrounds: allFile(filter: { sourceInstanceName: { eq: "images" } }) {
-//       nodes {
-//         relativePath
-//         childImageSharp {
-//           fluid(maxWidth: 2000, quality: 100) {
-//             ...GatsbyImageSharpFluid
-//           }
-//         }
-//       }
-//     }
-//   }
-// `
