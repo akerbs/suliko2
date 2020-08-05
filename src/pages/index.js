@@ -5,10 +5,8 @@ import Image from "../components/image"
 import SEO from "../components/seo"
 import bgImgs from "../images/bgImgs.gif"
 import bgImgsV from "../images/bgImgsV.gif"
-import bgImgsWP from "../images/bgImgs.webp"
-import bgImgsVWP from "../images/bgImgsV.webp"
-import overlay from "../images/overlay.png"
-import overlayV from "../images/overlayV.png"
+import imgs1ov from "../images/imgs1ov.webp"
+import imgs1ovV from "../images/imgs1ovV.webp"
 import { makeStyles } from "@material-ui/core/styles"
 import withWidth from "@material-ui/core/withWidth"
 import Hidden from "@material-ui/core/Hidden"
@@ -26,42 +24,12 @@ const useStyles = makeStyles(theme => ({
     margin: "0 auto",
   },
   imgFirst: {
-    zIndex: -999,
-    width: " 100%",
-    height: "100vh",
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-    backgroundRepeat: "no-repeat",
-    backgroundImage: `url(${bgImgsWP})`,
-  
-  },
-   imgFirstV: {
-      zIndex: -999,
-    width: " 100%",
-    height: "100vh",
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-    backgroundRepeat: "no-repeat",
-    backgroundImage: `url(${bgImgsVWP})`,
-  
-  },
-  overlay : {
-     zIndex: -99,
-  display: "flex",
-    height: "100%",
-    alignItems: "center",
-    color: "white",
-    background:
-      "radial-gradient(circle, rgba(255,255,255,0) 69%, rgba(0,0,0,0.9192051820728291) 80%)",
     [theme.breakpoints.down("xs")]: {
-      background:
-        "radial-gradient(circle, rgba(255,255,255,0) 32%, rgba(0,0,0,0.773546918767507) 67%)",
+      // transform: "rotate(90deg)",
+      // width: " 100%",
+      // height: "100%",
     },
   },
-  bgimgsWP: {
-    width: "100%",
-    height: "auto",
-  }
 }))
 
 const IndexPage = props => {
@@ -90,15 +58,10 @@ const IndexPage = props => {
       <SEO title="Home" />
       {/* <div className={classes.first}></div> */}
       <Hidden smUp>
-     
-       
-          <div  className={classes.imgFirstV}>  <div className={classes.overlay} /></div>
-     
+        <img src={imgs1ovV} alt="georgian food" className={classes.imgFirst} />
       </Hidden>
       <Hidden xsDown>
-     
-        <div  className={classes.imgFirst}>  <div className={classes.overlay} /></div>
-     
+        <img src={imgs1ov} alt="georgian food" className={classes.imgFirst} />
       </Hidden>
 
       <div className={classes.text1}>
