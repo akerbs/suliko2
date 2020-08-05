@@ -132,7 +132,7 @@ const IndexPage = props => {
         inventore velit consectetur excepturi incidunt ipsum quaerat eius
         dolorem, placeat dolore?
       </p>
-      <img
+      {/* <img
         data-sal="flip-up"
         data-sal-delay="300"
         data-sal-easing="ease"
@@ -141,7 +141,7 @@ const IndexPage = props => {
         style={{
           display: "block",
         }}
-      />
+      /> */}
     </Layout>
   )
 }

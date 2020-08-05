@@ -120,7 +120,7 @@ const SecondPage = () => {
         ipsum dolor, sit amet consectetur adipisicing elit.
       </p>
 
-      <img
+      {/* <img
         data-sal="flip-up"
         data-sal-delay="300"
         data-sal-easing="ease"
@@ -129,7 +129,7 @@ const SecondPage = () => {
         style={{
           display: "block",
         }}
-      />
+      /> */}
     </Layout>
   )
 }
