@@ -30,6 +30,11 @@ const useStyles = makeStyles(theme => ({
     height: "auto",
     [theme.breakpoints.down("xs")]: {},
   },
+  imgFirstS: {
+    width: " 100vw",
+    height: "auto",
+    [theme.breakpoints.down("xs")]: {},
+  },
 }))
 
 const IndexPage = () => {
@@ -65,11 +70,21 @@ const IndexPage = () => {
           media="(max-width: 599px)"
           srcset={imgs1ovV}
           type="image/webp"
+          className={classes.imgFirstS}
         />
-        <source media="(min-width: 600px)" srcset={imgs1ov} type="image/webp" />
-        <source media="(min-width: 600px)" srcset={bgImgs} />
+        <source
+          media="(min-width: 600px)"
+          srcset={imgs1ov}
+          type="image/webp"
+          className={classes.imgFirstS}
+        />
+        <source
+          media="(min-width: 600px)"
+          srcset={bgImgs}
+          className={classes.imgFirstS}
+        />
 
-        <img src={bgImgsV} alt="georgian food" />
+        <img src={bgImgsV} alt="georgian food" className={classes.imgFirstS} />
       </picture>
 
       <p>
