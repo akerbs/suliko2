@@ -5,6 +5,10 @@ import Image from "../components/image"
 import SEO from "../components/seo"
 import bgImgs from "../images/bgImgs.gif"
 import bgImgsV from "../images/bgImgsV.gif"
+import bgImgsWP from "../images/bgImgs.webp"
+import bgImgsVWP from "../images/bgImgsV.webp"
+import overlay from "../images/overlay.png"
+import overlayV from "../images/overlayV.png"
 import { makeStyles } from "@material-ui/core/styles"
 import withWidth from "@material-ui/core/withWidth"
 import Hidden from "@material-ui/core/Hidden"
@@ -22,12 +26,39 @@ const useStyles = makeStyles(theme => ({
     margin: "0 auto",
   },
   imgFirst: {
+    width: " 100%",
+    height: "100vh",
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat",
+    backgroundImage: `url(${bgImgsWP})`,
+  
+  },
+   imgFirstV: {
+    width: " 100%",
+    height: "100vh",
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat",
+    backgroundImage: `url(${bgImgsVWP})`,
+  
+  },
+  overlay : {
+  display: "flex",
+    height: "100%",
+    alignItems: "center",
+    color: "white",
+    background:
+      "radial-gradient(circle, rgba(255,255,255,0) 19%, rgba(0,0,0,0.9192051820728291) 68%)",
     [theme.breakpoints.down("xs")]: {
-      // transform: "rotate(90deg)",
-      // width: " 100%",
-      // height: "100%",
+      background:
+        "radial-gradient(circle, rgba(255,255,255,0) 32%, rgba(0,0,0,0.773546918767507) 67%)",
     },
   },
+  bgimgsWP: {
+    width: "100%",
+    height: "auto",
+  }
 }))
 
 const IndexPage = props => {
@@ -56,10 +87,15 @@ const IndexPage = props => {
       <SEO title="Home" />
       {/* <div className={classes.first}></div> */}
       <Hidden smUp>
-        <img src={bgImgsV} alt="georgian food" className={classes.imgFirst} />
+     
+       
+          <div  className={classes.imgFirstV}>  <div className={classes.overlay} /></div>
+     
       </Hidden>
       <Hidden xsDown>
-        <img src={bgImgs} alt="georgian food" className={classes.imgFirst} />
+     
+        <div  className={classes.imgFirst}>  <div className={classes.overlay} /></div>
+     
       </Hidden>
 
       <div className={classes.text1}>

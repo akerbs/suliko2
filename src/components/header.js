@@ -51,7 +51,12 @@ const useStyles = makeStyles(theme => ({
     alignItems: "flex-start",
     padding: 0,
     margin: 0,
-    [theme.breakpoints.down("sm")]: {},
+    marginLeft: 10,
+    marginRight: 10,
+    [theme.breakpoints.down("sm")]: {
+      padding: 0,
+      margin: 0,
+    },
   },
 
   logo2Img: {
