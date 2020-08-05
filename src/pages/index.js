@@ -140,7 +140,6 @@ const IndexPage = props => {
         alt="slogan"
         style={{
           display: "block",
-          zIndex: 999,
         }}
       />
     </Layout>

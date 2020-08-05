@@ -31,7 +31,7 @@
 .accordionItem {
   /* border: 1px solid #f9eacf; */
   text-align: center;
-  padding: 0.85em 0;
+  padding: 0.87em 0;
   color: #f9eacf;
   border-radius: 30px;
   background-color: rgba(43, 42, 41);
@@ -45,7 +45,7 @@
   transition: height 0.25s;
   display: flex;
   flex-direction: column;
-  margin-top: 3px;
+  margin-top: 4px;
   justify-content: space-around;
 }
 
