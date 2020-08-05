@@ -32,7 +32,7 @@ const useStyles = makeStyles(theme => ({
   },
 }))
 
-const IndexPage = props => {
+const IndexPage = () => {
   const classes = useStyles()
 
   return (
@@ -60,7 +60,7 @@ const IndexPage = props => {
           <img src={bgImgs} alt="georgian food" className={classes.imgFirst} />
         </picture>
       </Hidden> */}
-      <picture>
+      <picture className={classes.imgFirst}>
         <source
           media="(max-width: 599px)"
           srcset={imgs1ovV}
