@@ -11,6 +11,8 @@ import { makeStyles } from "@material-ui/core/styles"
 import withWidth from "@material-ui/core/withWidth"
 import Hidden from "@material-ui/core/Hidden"
 import PropTypes from "prop-types"
+import sloganImg2 from "../images/slogan_eng2.png"
+import Container from "@material-ui/core/Container"
 
 import Header from "../components/header"
 
@@ -24,58 +26,53 @@ const useStyles = makeStyles(theme => ({
     margin: "0 auto",
   },
   imgFirst: {
-     width: " 100%",
-      height: "100%",
-    [theme.breakpoints.down("xs")]: {
-      // transform: "rotate(90deg)",
-      // width: " 100%",
-      // height: "100%",
-    },
+    width: " 100%",
+    height: "auto",
+    [theme.breakpoints.down("xs")]: {},
   },
 }))
 
 const IndexPage = props => {
-  // const inputRef = useRef()
-  // console.log("TEST!")
-  // console.log(inputRef)
   const classes = useStyles()
-
-  // const bgImgPosBb = () => {
-  //   return inputRef.current.getBoundingClientRect().bottom
-  // }
-
-  // const scrollHandler = _ => {
-  //   const level = inputRef.current.getBoundingClientRect().bottom
-  //   return level
-  // }
-  // useEffect(() => {
-  //   window.addEventListener("scroll", scrollHandler, true)
-  //   return () => {
-  //     window.removeEventListener("scroll", scrollHandler, true)
-  //   }
-  // }, [])
 
   return (
     <Layout>
       <SEO title="Home" />
-      {/* <div className={classes.first}></div> */}
-      <Hidden smUp>
-     
       <picture>
-        <source srcset={imgs1ovV} type="image/webp" className={classes.imgFirst} />
-        <img src={bgImgsV} alt="georgian food" className={classes.imgFirst} />
+        <source
+          srcset={window.innerWidth <= 600 ? imgs1ovV : imgs1ov}
+          type="image/webp"
+          className={classes.imgFirst}
+        />
+        <img
+          src={window.innerWidth <= 600 ? bgImgsV : bgImgs}
+          alt="georgian food"
+          className={classes.imgFirst}
+        />
       </picture>
-     
+
+      {/* <Hidden smUp>
+        <picture>
+          <source
+            srcset={imgs1ovV}
+            type="image/webp"
+            className={classes.imgFirst}
+          />
+          <img src={bgImgsV} alt="georgian food" className={classes.imgFirst} />
+        </picture>
       </Hidden>
       <Hidden xsDown>
-       <picture>
-        <source srcset={imgs1ov} type="image/webp" className={classes.imgFirst} />
-        <img src={bgImgs} alt="georgian food" className={classes.imgFirst} />
-      </picture>
-      
-      </Hidden>
+        <picture>
+          <source
+            srcset={imgs1ov}
+            type="image/webp"
+            className={classes.imgFirst}
+          />
+          <img src={bgImgs} alt="georgian food" className={classes.imgFirst} />
+        </picture>
+      </Hidden> */}
 
-      <div className={classes.text1}>
+      <p>
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium
         commodi earum possimus, odit laboriosam voluptatibus numquam labore
         quod, culpa optio exercitationem sint eveniet maxime quam amet
@@ -94,7 +91,7 @@ const IndexPage = props => {
         repellendus dolorum est quos placeat officiis eos. Ullam, consequatur
         inventore velit consectetur excepturi incidunt ipsum quaerat eius
         dolorem, placeat dolore? Lorem ipsum dolor, sit amet consectetur
-        adipisicing elit. Praesentium commodi earum possimus, odit laboriosam
+        adipisicing elit.Praesentium commodi earum possimus, odit laboriosam
         voluptatibus numquam labore quod, culpa optio exercitationem sint
         eveniet maxime quam amet voluptates nesciunt blanditiis dignissimos
         repellendus dolorum est quos placeat officiis eos. Ullam, consequatur
@@ -124,15 +121,27 @@ const IndexPage = props => {
         repellendus dolorum est quos placeat officiis eos. Ullam, consequatur
         inventore velit consectetur excepturi incidunt ipsum quaerat eius
         dolorem, placeat dolore?
-      </div>
+      </p>
+      <img
+        data-sal="flip-up"
+        data-sal-delay="300"
+        data-sal-easing="ease"
+        src={sloganImg2}
+        alt="slogan"
+        style={{
+          display: "block",
+          zIndex: 999,
+        }}
+      />
     </Layout>
   )
 }
+export default IndexPage
 
-IndexPage.propTypes = {
-  width: PropTypes.oneOf(["lg", "md", "sm", "xl", "xs"]).isRequired,
-}
-export default withWidth()(IndexPage)
+// IndexPage.propTypes = {
+//   width: PropTypes.oneOf(["lg", "md", "sm", "xl", "xs"]).isRequired,
+// }
+// export default withWidth()(IndexPage)
 
 // export const query = graphql`
 //   query {

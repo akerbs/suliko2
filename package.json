@@ -16,6 +16,7 @@
     "@material-ui/icons": "^4.9.1",
     "@material-ui/lab": "^4.0.0-alpha.56",
     "@material-ui/pickers": "^3.2.10",
+    "animate.css": "^4.1.0",
     "axios": "^0.19.2",
     "bootstrap": "^4.5.0",
     "dotenv": "^8.2.0",
