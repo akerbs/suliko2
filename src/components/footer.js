@@ -9,54 +9,24 @@ import Logo2 from "../images/Logo2.png"
 // import Img from "gatsby-image"
 // import { graphql } from "gatsby"
 
-const useStyles = makeStyles(theme => ({
-  footerContainer: {
-    // padding: theme.spacing(1, 1),
-    display: "flex",
-    flexDirection: "column",
-
-    // paddingTop: 200,
-    textAlign: "center",
-    justifyContent: "center",
-    color: "black",
-    // textShadow: "rgba(133,26,29)  0 0 5px",
-    [theme.breakpoints.down("sm")]: {
-      // marginBottom: 50,
-      // paddingTop: 50,
-    },
-    // marginTop: "auto",
-  },
-  breadcrumbs: {
-    justifyContent: "center",
-    display: "flex",
-    // flexDirection: "column",
-    // textAlign: "center",
-  },
-  // extLink: {
-  //   cursor: "pointer",
-  //   color: "white",
-  //   textShadow: "rgba(133,26,29)  0 0 5px",
-  //   "&:hover": {
-  //     textDecoration: "none",
-  //     color: "rgba(133,26,29)",
-  //     textShadow: "white 0 0 5px",
-  //   },
-  // },
-}))
+const useStyles = makeStyles(theme => ({}))
 
 const Footer = props => {
   const classes = useStyles()
 
   return (
-    <Container maxWidth="sm" className={classes.footerContainer}>
-      <CssBaseline />
-      {/* 
-      <Img
-        fluid={props.data.Logo2.childImageSharp.fluid}
-        alt="Logo 2 Suliko"
-        className={classes.logo2Img}
-      /> */}
+    <Container
+      maxWidth="sm"
+      style={{
+        display: "flex",
+        flexDirection: "column",
 
+        textAlign: "center",
+        justifyContent: "center",
+        color: "black",
+      }}
+    >
+      <CssBaseline />
       <img src={Logo2} alt="logo" style={{ maxWidth: 120, margin: "0 auto" }} />
 
       <Typography variant="body2">
@@ -75,7 +45,10 @@ const Footer = props => {
             Anatol Kerbs
           </Link> */}
 
-      <Breadcrumbs aria-label="breadcrumb" className={classes.breadcrumbs}>
+      <Breadcrumbs
+        aria-label="breadcrumb"
+        style={{ justifyContent: "center", display: "flex" }}
+      >
         <Link color="inherit" href="#">
           <Typography variant="caption"> Impressum</Typography>
         </Link>
@@ -88,15 +61,3 @@ const Footer = props => {
 }
 
 export default Footer
-
-// export const query = graphql`
-//   query {
-//     Logo2: file(relativePath: { eq: "Logo2.png" }) {
-//       childImageSharp {
-//         fluid(maxWidth: 2000) {
-//           ...GatsbyImageSharpFluid
-//         }
-//       }
-//     }
-//   }
-// `
