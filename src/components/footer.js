@@ -26,13 +26,6 @@ const useStyles = makeStyles(theme => ({
     },
     // marginTop: "auto",
   },
-  logo2: {
-    margin: "0 auto",
-    maxWidth: 130,
-    [theme.breakpoints.down("sm")]: {
-      maxWidth: 110,
-    },
-  },
   breadcrumbs: {
     justifyContent: "center",
     display: "flex",
@@ -64,7 +57,7 @@ const Footer = props => {
         className={classes.logo2Img}
       /> */}
 
-      <img src={Logo2} alt="logo" className={classes.logo2} />
+      <img src={Logo2} alt="logo" style={{ maxWidth: 120 }} />
 
       <Typography variant="body2">
         {" © "} {new Date().getFullYear()} Suliko. All Rights Reserved
