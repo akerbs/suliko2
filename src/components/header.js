@@ -23,7 +23,7 @@ import CloseIcon from "@material-ui/icons/Close"
 import bgPatternImg from "../images/bgPatternImg.png"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons"
-// import LangSwAkk from "./langSwAkk"
+import LangSwAkk from "./langSwAkk"
 import Button from "@material-ui/core/Button"
 import { bgImgPosBb, bgImgPosBbV } from "../pages/index"
 
@@ -260,10 +260,6 @@ function Header(props) {
         })}
       >
         <Toolbar className={classes.toolbar}>
-          {/* <Hidden smUp>
-            <LangSwAkk />
-          </Hidden> */}
-
           <Hidden xsDown>
             <Link to="/">
               <img src={Logo2} alt="logo" className={classes.logo2Img} />
@@ -280,9 +276,7 @@ function Header(props) {
           </Link>
 
           <div style={{ display: "flex", justifyContent: "column" }}>
-            {/* <Hidden xsDown>
-              <LangSwAkk />
-            </Hidden> */}
+            <LangSwAkk />
 
             <IconButton
               size="small"
