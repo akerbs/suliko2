@@ -27,37 +27,6 @@ const useStyles = makeStyles(theme => ({
   root: {
     backgroundColor: "#f9eacf",
   },
-  // container: {
-  //   position: "relative",
-  //   overflow: "hidden",
-  //   height: 300,
-  //   width: "100%",
-  //   paddingTop: "50%",
-  //   [theme.breakpoints.down("xs")]: {
-  //     paddingTop: "100%",
-  //   },
-  // },
-
-  // responsiveIframe: {
-  //   position: "absolute",
-  //   top: 0,
-  //   left: 0,
-  //   bottom: 0,
-  //   right: 0,
-  //   width: "100%",
-  //   height: 600,
-  //   border: 0,
-  //   marginTop: -150,
-  // },
-  phoneEmailLink: {
-    color: " rgba(255,255,255)",
-    textDecoration: "none",
-
-    "&:hover": {
-      color: "rgba(133,26,29)",
-      textShadow: "rgba(255,255,255) 0 0 5px",
-    },
-  },
 }))
 
 const IndexPage = props => {
@@ -243,7 +212,15 @@ const IndexPage = props => {
                   target="_blank"
                   rel="noopener noreferrer"
                   href="tel:+4904049201953"
-                  className={classes.phoneEmailLink}
+                  style={{
+                    color: " rgba(255,255,255)",
+                    textDecoration: "none",
+
+                    "&:hover": {
+                      color: "rgba(133,26,29)",
+                      textShadow: "rgba(255,255,255) 0 0 5px",
+                    },
+                  }}
                   //  onClick="this.blur()"
                 >
                   <PhoneIcon style={{ fontSize: 20 }} /> +49(0)40 49201953
@@ -253,7 +230,15 @@ const IndexPage = props => {
                   target="_blank"
                   rel="noopener noreferrer"
                   href="mailto:info@restaurant-suliko.de"
-                  className={classes.phoneEmailLink}
+                  style={{
+                    color: " rgba(255,255,255)",
+                    textDecoration: "none",
+
+                    "&:hover": {
+                      color: "rgba(133,26,29)",
+                      textShadow: "rgba(255,255,255) 0 0 5px",
+                    },
+                  }}
                   //  onClick="this.blur()"
                 >
                   <EmailIcon style={{ fontSize: 20 }} />{" "}
