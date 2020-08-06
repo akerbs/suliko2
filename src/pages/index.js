@@ -109,78 +109,80 @@ const IndexPage = props => {
 
   return (
     <Layout>
-      <SEO title="Home" />
-      <picture style={{ width: "100vw", height: "auto" }}>
-        <source
-          media="(max-width: 599px)"
-          srcset={imgs1ovV}
-          type="image/webp"
-          style={{ width: "100vw", height: "auto" }}
-        />
-        <source
-          media="(min-width: 600px)"
-          srcset={imgs1ov}
-          type="image/webp"
-          style={{ width: "100vw", height: "auto" }}
-        />
-        <source
-          media="(min-width: 600px)"
-          srcset={bgImgs}
-          style={{ width: "100vw", height: "auto" }}
-        />
+      <Container style={{ margin: 0, padding: 0, zIndex: 99 }}>
+        <SEO title="Home" />
 
-        <img
-          src={bgImgsV}
-          alt="georgian food"
-          style={{ width: "100vw", height: "auto" }}
-        />
-      </picture>
-      <Container maxWidth="md">
-        <br /> <br /> <br /> <br />
-        <Container id="abount us">
-          <img
-            data-sal="zoom-in"
-            data-sal-delay="300"
-            data-sal-easing="ease"
-            src={sloganImg2}
-            alt="slogan"
-            style={{
-              display: "block",
-            }}
+        <picture style={{ width: "100vw", height: "auto" }}>
+          <source
+            media="(max-width: 599px)"
+            srcset={imgs1ovV}
+            type="image/webp"
+            style={{ width: "100vw", height: "auto" }}
           />
-          <br /> <br />
-          <Typography
-            variant="body1"
-            style={{ lineHeight: 1.5 }}
-            color="secondary"
-            data-sal="zoom-in"
-            data-sal-delay="500"
-            data-sal-easing="ease"
-            style={{
-              display: "block",
-            }}
-          >
-            Herzlich willkommen in unserem Restaurant Suliko. Bei uns werden Sie
-            im richtigen Sinne des Wortes mit leckerem Essen, angenehmen
-            Ambiente und georgischer Gastfreundlichkeit verwöhnt. Lassen Sie
-            einen Blick auf unser Menü werfen und sprechen Sie uns an. Bei uns
-            können Sie zwischen abwechslungsreichen Gerichten, gutem Wein und
-            gebackenen georgischen Brot wählen. Wir würden Ihnen dabei für alle
-            festlichen Anlässe oder / und einfachen Abend mit Freunden und
-            Familie oder einem romantischen Abend zur Zweit zur Seite stehen und
-            machen für Sie ein individuelles Angebot, das zu Ihrem Lebensstil
-            passt...
-            <Link
-              to="/deu/about-us"
-              className={classes.navLink}
-              activeClassName={classes.active}
+          <source
+            media="(min-width: 600px)"
+            srcset={imgs1ov}
+            type="image/webp"
+            style={{ width: "100vw", height: "auto" }}
+          />
+          <source
+            media="(min-width: 600px)"
+            srcset={bgImgs}
+            style={{ width: "100vw", height: "auto" }}
+          />
+
+          <img
+            src={bgImgsV}
+            alt="georgian food"
+            style={{ width: "100vw", height: "auto" }}
+          />
+        </picture>
+        <Container maxWidth="md">
+          <br /> <br /> <br /> <br />
+          <Container id="abount us">
+            <img
+              data-sal="zoom-in"
+              data-sal-delay="300"
+              data-sal-easing="ease"
+              src={sloganImg2}
+              alt="slogan"
+              style={{
+                display: "block",
+              }}
+            />
+            <br /> <br />
+            <Typography
+              variant="body1"
+              style={{ lineHeight: 1.5 }}
+              color="secondary"
+              data-sal="zoom-in"
+              data-sal-delay="500"
+              data-sal-easing="ease"
+              style={{
+                display: "block",
+              }}
             >
-              lesen weiter
-            </Link>
-          </Typography>
-        </Container>
-        <br /> <br />
-        {/* <Container id="carousel">
+              Herzlich willkommen in unserem Restaurant Suliko. Bei uns werden
+              Sie im richtigen Sinne des Wortes mit leckerem Essen, angenehmen
+              Ambiente und georgischer Gastfreundlichkeit verwöhnt. Lassen Sie
+              einen Blick auf unser Menü werfen und sprechen Sie uns an. Bei uns
+              können Sie zwischen abwechslungsreichen Gerichten, gutem Wein und
+              gebackenen georgischen Brot wählen. Wir würden Ihnen dabei für
+              alle festlichen Anlässe oder / und einfachen Abend mit Freunden
+              und Familie oder einem romantischen Abend zur Zweit zur Seite
+              stehen und machen für Sie ein individuelles Angebot, das zu Ihrem
+              Lebensstil passt...
+              <Link
+                to="/deu/about-us"
+                className={classes.navLink}
+                activeClassName={classes.active}
+              >
+                lesen weiter
+              </Link>
+            </Typography>
+          </Container>
+          <br /> <br />
+          {/* <Container id="carousel">
           <Slider {...settings}>
             <div>
               <Img
@@ -212,64 +214,67 @@ const IndexPage = props => {
             </div>
           </Slider>
         </Container> */}
-        <Container
-          maxWidth="md"
-          style={{
-            margin: 0,
-            paddingTop: 10,
-            padding: 0,
-            // background: "rgba(255,255,255, 0.75)",
-          }}
-        >
           <Container
+            maxWidth="md"
             style={{
-              background: "rgba(49, 10, 10, 0.75)",
-
-              padding: "50px 15px 10px 15px",
-              marginTop: 50,
-              borderRadius: 10,
+              margin: 0,
+              paddingTop: 10,
+              padding: 0,
+              // background: "rgba(255,255,255, 0.75)",
             }}
           >
-            <Typography
-              variant="body1"
-              align="center"
-              style={{ lineHeight: 2 }}
-              color="secondary"
+            <Container
+              style={{
+                background: "rgba(49, 10, 10, 0.75)",
+
+                padding: "50px 15px 10px 15px",
+                marginTop: 50,
+                borderRadius: 10,
+              }}
             >
-              <HomeIcon style={{ fontSize: 20 }} /> Mittelweg 24, 20148 Hamburg
-              <br />
-              <a
-                target="_blank"
-                rel="noopener noreferrer"
-                href="tel:+4904049201953"
-                className={classes.phoneEmailLink}
-                //  onClick="this.blur()"
+              <Typography
+                variant="body1"
+                align="center"
+                style={{ lineHeight: 2 }}
+                color="secondary"
               >
-                <PhoneIcon style={{ fontSize: 20 }} /> +49(0)40 49201953
-              </a>
-              <br />
-              <a
-                target="_blank"
-                rel="noopener noreferrer"
-                href="mailto:info@restaurant-suliko.de"
-                className={classes.phoneEmailLink}
-                //  onClick="this.blur()"
-              >
-                <EmailIcon style={{ fontSize: 20 }} /> info@restaurant-suliko.de
-              </a>
-              <br /> <br />
-              <ScheduleIcon style={{ fontSize: 20 }} /> Öffnungszeiten <br />
-              Mo- Do 12:00 - 15:00, 17:00 - 22:00 <br />
-              Fr 12:00 - 15:00, 17:00 - 24:00 <br />
-              Sa 17:00 - 24:00 <br />
-              Son 15:00 - 22:00 <br />
-              <br />
-            </Typography>
-            <Container className={classes.container}>
-              <iframe
-                className={classes.responsiveIframe}
-                src="https://www.google.com/maps/d/u/0/embed?mid=1UQMf_-g-DjVCWRAkAVCDWjVNGXkvW4xc"
-              ></iframe>
+                <HomeIcon style={{ fontSize: 20 }} /> Mittelweg 24, 20148
+                Hamburg
+                <br />
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="tel:+4904049201953"
+                  className={classes.phoneEmailLink}
+                  //  onClick="this.blur()"
+                >
+                  <PhoneIcon style={{ fontSize: 20 }} /> +49(0)40 49201953
+                </a>
+                <br />
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="mailto:info@restaurant-suliko.de"
+                  className={classes.phoneEmailLink}
+                  //  onClick="this.blur()"
+                >
+                  <EmailIcon style={{ fontSize: 20 }} />{" "}
+                  info@restaurant-suliko.de
+                </a>
+                <br /> <br />
+                <ScheduleIcon style={{ fontSize: 20 }} /> Öffnungszeiten <br />
+                Mo- Do 12:00 - 15:00, 17:00 - 22:00 <br />
+                Fr 12:00 - 15:00, 17:00 - 24:00 <br />
+                Sa 17:00 - 24:00 <br />
+                Son 15:00 - 22:00 <br />
+                <br />
+              </Typography>
+              <Container className={classes.container}>
+                <iframe
+                  className={classes.responsiveIframe}
+                  src="https://www.google.com/maps/d/u/0/embed?mid=1UQMf_-g-DjVCWRAkAVCDWjVNGXkvW4xc"
+                ></iframe>
+              </Container>
             </Container>
           </Container>
         </Container>
