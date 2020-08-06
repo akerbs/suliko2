@@ -146,7 +146,6 @@ const IndexPage = props => {
             alt="slogan"
             style={{
               display: "block",
-              zIndex: 999,
             }}
           />
           <br /> <br />
@@ -159,7 +158,6 @@ const IndexPage = props => {
             data-sal-easing="ease"
             style={{
               display: "block",
-              zIndex: 999,
             }}
           >
             Herzlich willkommen in unserem Restaurant Suliko. Bei uns werden Sie
