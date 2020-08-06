@@ -24,6 +24,28 @@ const useStyles = makeStyles(theme => ({
   root: {
     backgroundColor: "#f9eacf",
   },
+  mapWrapper: {
+    position: "relative",
+    overflow: "hidden",
+    height: 300,
+    width: "100%",
+    paddingTop: "50%",
+    [theme.breakpoints.down("xs")]: {
+      paddingTop: "100%",
+    },
+  },
+
+  responsiveIframe: {
+    position: "absolute",
+    top: 0,
+    left: 0,
+    bottom: 0,
+    right: 0,
+    width: "100%",
+    height: 600,
+    border: 0,
+    marginTop: -150,
+  },
 }))
 
 const IndexPage = props => {
@@ -180,7 +202,14 @@ const IndexPage = props => {
             </div>
           </Slider>
         </Container>
-        {/* <ContactPage /> */}
+        <Container id="contact">
+          <Container className={classes.mapWrapper}>
+            <iframe
+              className={classes.responsiveIframe}
+              src="https://www.google.com/maps/d/u/0/embed?mid=1UQMf_-g-DjVCWRAkAVCDWjVNGXkvW4xc"
+            ></iframe>
+          </Container>
+        </Container>
       </Container>
     </Layout>
   )

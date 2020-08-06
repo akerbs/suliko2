@@ -57,7 +57,7 @@ const Footer = props => {
         className={classes.logo2Img}
       /> */}
 
-      <img src={Logo2} alt="logo" style={{ maxWidth: 120 }} />
+      <img src={Logo2} alt="logo" style={{ maxWidth: 120, margin: "0 auto" }} />
 
       <Typography variant="body2">
         {" © "} {new Date().getFullYear()} Suliko. All Rights Reserved
