@@ -191,6 +191,7 @@ const IndexPage = props => {
             </div>
           </Slider>
         </Container>
+        {/* <ContactPage /> */}
       </Container>
     </Layout>
   )
