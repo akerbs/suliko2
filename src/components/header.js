@@ -21,8 +21,8 @@ import Hidden from "@material-ui/core/Hidden"
 import PropTypes from "prop-types"
 import CloseIcon from "@material-ui/icons/Close"
 import bgPatternImg from "../images/bgPatternImg.png"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons"
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+// import { faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons"
 import LangSwAkk from "./langSwAkk"
 import Button from "@material-ui/core/Button"
 import { bgImgPosBb, bgImgPosBbV } from "../pages/index"
@@ -318,7 +318,7 @@ function Header(props) {
       >
         <div className={classes.drawerHeader}>
           <div className={classes.mediaIcons}>
-            <a
+            {/* <a
               target="_blank"
               rel="noopener noreferrer"
               href="https://www.facebook.com/restaurant.suliko.hamburg"
@@ -339,7 +339,7 @@ function Header(props) {
               <ListItem button key={"instagram"} className={classes.mediaIcon}>
                 <FontAwesomeIcon icon={faInstagram} size="2x" />
               </ListItem>
-            </a>
+            </a> */}
           </div>
           <CloseIcon style={{ color: "transparent" }} />
 
