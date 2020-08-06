@@ -6,6 +6,8 @@ import Container from "@material-ui/core/Container"
 import Breadcrumbs from "@material-ui/core/Breadcrumbs"
 import Link from "@material-ui/core/Link"
 import Logo2 from "../images/Logo2.png"
+// import Img from "gatsby-image"
+// import { graphql } from "gatsby"
 
 const useStyles = makeStyles(theme => ({
   footerContainer: {
@@ -49,13 +51,26 @@ const useStyles = makeStyles(theme => ({
   },
 }))
 
-const Footer = () => {
+const Footer = props => {
   const classes = useStyles()
 
   return (
     <Container maxWidth="sm" className={classes.footerContainer}>
       <CssBaseline />
-      <img src={Logo2} alt="logo" className={classes.logo2Img} />
+      {/* 
+      <Img
+        fluid={props.data.Logo2.childImageSharp.fluid}
+        alt="Logo 2 Suliko"
+        className={classes.logo2Img}
+      /> */}
+
+      <img
+        src={Logo2}
+        alt="logo"
+        className={classes.logo2Img}
+        style={{ maxWidth: 100 }}
+      />
+
       <Typography variant="body2">
         {" © "} {new Date().getFullYear()} Suliko. All Rights Reserved
         <br />{" "}
@@ -85,3 +100,15 @@ const Footer = () => {
 }
 
 export default Footer
+
+// export const query = graphql`
+//   query {
+//     Logo2: file(relativePath: { eq: "Logo2.png" }) {
+//       childImageSharp {
+//         fluid(maxWidth: 2000) {
+//           ...GatsbyImageSharpFluid
+//         }
+//       }
+//     }
+//   }
+// `
