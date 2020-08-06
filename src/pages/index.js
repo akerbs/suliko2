@@ -27,28 +27,28 @@ const useStyles = makeStyles(theme => ({
   root: {
     backgroundColor: "#f9eacf",
   },
-  container: {
-    position: "relative",
-    overflow: "hidden",
-    height: 300,
-    width: "100%",
-    paddingTop: "50%",
-    [theme.breakpoints.down("xs")]: {
-      paddingTop: "100%",
-    },
-  },
+  // container: {
+  //   position: "relative",
+  //   overflow: "hidden",
+  //   height: 300,
+  //   width: "100%",
+  //   paddingTop: "50%",
+  //   [theme.breakpoints.down("xs")]: {
+  //     paddingTop: "100%",
+  //   },
+  // },
 
-  responsiveIframe: {
-    position: "absolute",
-    top: 0,
-    left: 0,
-    bottom: 0,
-    right: 0,
-    width: "100%",
-    height: 600,
-    border: 0,
-    marginTop: -150,
-  },
+  // responsiveIframe: {
+  //   position: "absolute",
+  //   top: 0,
+  //   left: 0,
+  //   bottom: 0,
+  //   right: 0,
+  //   width: "100%",
+  //   height: 600,
+  //   border: 0,
+  //   marginTop: -150,
+  // },
   phoneEmailLink: {
     color: " rgba(255,255,255)",
     textDecoration: "none",
@@ -269,9 +269,29 @@ const IndexPage = props => {
                 Son 15:00 - 22:00 <br />
                 <br />
               </Typography>
-              <Container className={classes.container}>
+              <Container
+                className={classes.container}
+                style={{
+                  position: "relative",
+                  overflow: "hidden",
+                  height: 300,
+                  width: "100%",
+                  paddingTop: "50%",
+                }}
+              >
                 <iframe
                   className={classes.responsiveIframe}
+                  style={{
+                    position: "absolute",
+                    top: 0,
+                    left: 0,
+                    bottom: 0,
+                    right: 0,
+                    width: "100%",
+                    height: 600,
+                    border: 0,
+                    marginTop: -150,
+                  }}
                   src="https://www.google.com/maps/d/u/0/embed?mid=1UQMf_-g-DjVCWRAkAVCDWjVNGXkvW4xc"
                 ></iframe>
               </Container>
