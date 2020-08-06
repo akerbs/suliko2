@@ -18,7 +18,6 @@ import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
 import Slider from "react-slick"
 import Img from "gatsby-image"
-import ContactPage from "./contact"
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -170,7 +169,7 @@ const IndexPage = props => {
           </Typography>
         </Container>
         <br /> <br />
-        <Container id="carousel">
+        {/* <Container id="carousel">
           <Slider {...settings}>
             <div>
               <Img
@@ -201,7 +200,7 @@ const IndexPage = props => {
               />
             </div>
           </Slider>
-        </Container>
+        </Container> */}
         <Container id="contact">
           <Container className={classes.mapWrapper}>
             <iframe

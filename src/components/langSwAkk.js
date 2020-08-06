@@ -1,4 +1,4 @@
-// import "./langSwAkk.css"
+import "./langSwAkk.css"
 import React from "react"
 import { makeStyles } from "@material-ui/core/styles"
 import Typography from "@material-ui/core/Typography"
@@ -6,58 +6,58 @@ import { Link } from "gatsby"
 import Box from "@material-ui/core/Box"
 
 const useStyles = makeStyles(theme => ({
-  accordion: {
-    zIndex: "999",
-    padding: "0",
-    left: "20",
-    fontSize: "14px",
-    width: "43.5px",
-    height: "auto",
-    marginTop: "100px",
-
-    position: "fixed",
-    fontFamily: "Roboto, sans-serif",
-
-    "&:hover $accordionItemContent": {
-      height: "0",
-      overflow: "hidden",
-      transition: "height 0.25s",
-    },
-
-    "&:hover $accordionItem&:hover $accordionItemContent": {
-      height: "7em",
-    },
-
-    "&:hover $accordionItem&:hover $accordionItemContent": {
-      height: "7em",
-    },
-    "&$accordionItem:default $accordionItemContent": { height: "7em" },
-  },
-  accordionItem: {
-    textAlign: "center",
-    padding: "0.7em 0",
-    color: "rgba(43, 42, 41)",
-    borderRadius: "30px",
-    backgroundColor: "#f9eacf",
-  },
-  accordionItemContent: {
-    height: "0",
-    overflow: "hidden",
-    transition: "height 0.25s",
-    display: "flex",
-    flexDirection: "column",
-    marginTop: "4px",
-    justifyContent: "space-around",
-  },
-  link: {
-    textDecoration: "none",
-    color: "rgba(43, 42, 41)",
-    "&:hover": {
-      textDecoration: "none",
-      color: "rgba(43, 42, 41)",
-      fontWeight: "bold",
-    },
-  },
+  // accordion: {
+  //   zIndex: "999",
+  //   padding: "0",
+  //   left: "20",
+  //   fontSize: "14px",
+  //   width: "43.5px",
+  //   height: "auto",
+  //   marginTop: "100px",
+  //   position: "fixed",
+  //   fontFamily: "Roboto, sans-serif",
+  //   "&:hover $accordionItemContent": {
+  //     height: "0",
+  //     overflow: "hidden",
+  //     transition: "height 0.25s",
+  //   },
+  //   "&:hover $accordionItemContent": {
+  //     height: "7em",
+  //   },
+  //   // "&:hover &$accordionItem&:hover $accordionItemContent": {
+  //   //   height: "7em",
+  //   // },
+  //   // "&$accordionItem:default $accordionItemContent": { height: "7em" },
+  // },
+  // accordionItem: {
+  //   textAlign: "center",
+  //   padding: "0.7em 0",
+  //   color: "rgba(43, 42, 41)",
+  //   borderRadius: "30px",
+  //   backgroundColor: "#f9eacf",
+  //   "&:hover $accordionItemContent": {
+  //     height: "7em",
+  //   },
+  //   "&:default $accordionItemContent": { height: "7em" },
+  // },
+  // accordionItemContent: {
+  //   height: "0",
+  //   overflow: "hidden",
+  //   transition: "height 0.25s",
+  //   display: "flex",
+  //   flexDirection: "column",
+  //   marginTop: "4px",
+  //   justifyContent: "space-around",
+  // },
+  // link: {
+  //   textDecoration: "none",
+  //   color: "rgba(43, 42, 41)",
+  //   "&:hover": {
+  //     textDecoration: "none",
+  //     color: "rgba(43, 42, 41)",
+  //     fontWeight: "bold",
+  //   },
+  // },
 }))
 
 const LangSwAkk = () => {
