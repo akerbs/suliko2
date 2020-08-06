@@ -213,15 +213,13 @@ const IndexPage = props => {
                   rel="noopener noreferrer"
                   href="tel:+4904049201953"
                   style={{
-                    color: " rgba(255,255,255)",
+                    color: "black",
                     textDecoration: "none",
-
                     "&:hover": {
-                      color: "rgba(133,26,29)",
-                      textShadow: "rgba(255,255,255) 0 0 5px",
+                      color: "black",
+                      fontWeight: "bold",
                     },
                   }}
-                  //  onClick="this.blur()"
                 >
                   <PhoneIcon style={{ fontSize: 20 }} /> +49(0)40 49201953
                 </a>
@@ -231,15 +229,13 @@ const IndexPage = props => {
                   rel="noopener noreferrer"
                   href="mailto:info@restaurant-suliko.de"
                   style={{
-                    color: " rgba(255,255,255)",
+                    color: "black",
                     textDecoration: "none",
-
                     "&:hover": {
-                      color: "rgba(133,26,29)",
-                      textShadow: "rgba(255,255,255) 0 0 5px",
+                      color: "black",
+                      fontWeight: "bold",
                     },
                   }}
-                  //  onClick="this.blur()"
                 >
                   <EmailIcon style={{ fontSize: 20 }} />{" "}
                   info@restaurant-suliko.de
