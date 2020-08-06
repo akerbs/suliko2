@@ -225,8 +225,6 @@ const IndexPage = props => {
           >
             <Container
               style={{
-                background: "rgba(49, 10, 10, 0.75)",
-
                 padding: "50px 15px 10px 15px",
                 marginTop: 50,
                 borderRadius: 10,
