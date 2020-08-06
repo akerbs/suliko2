@@ -76,7 +76,7 @@ const IndexPage = props => {
   return (
     <Layout>
       <SEO title="Home" />
-      {/* <picture style={{ width: "100vw", height: "auto" }}>
+      <picture style={{ width: "100vw", height: "auto" }}>
         <source
           media="(max-width: 599px)"
           srcset={imgs1ovV}
@@ -100,20 +100,9 @@ const IndexPage = props => {
           alt="georgian food"
           style={{ width: "100vw", height: "auto" }}
         />
-      </picture> */}
+      </picture>
       <Container maxWidth="md">
-        {/* <p
-          data-sal="zoom-in"
-          data-sal-delay="300"
-          data-sal-easing="ease"
-          style={{
-            display: "block",
-            zIndex: 999,
-          }}
-        >
-          Liebe
-        </p> */}
-        <br /> <br /> <br /> <br /> <br /> <br />
+        <br /> <br /> <br /> <br />
         <Container id="abount us">
           <img
             data-sal="zoom-in"
@@ -126,7 +115,7 @@ const IndexPage = props => {
               zIndex: 999,
             }}
           />
-
+          <br /> <br />
           <Typography
             variant="body1"
             style={{ lineHeight: 1.5 }}
@@ -160,7 +149,7 @@ const IndexPage = props => {
         </Container>
         <br /> <br />
         <Container id="carousel">
-          {/* <Slider {...settings}>
+          <Slider {...settings}>
             <div>
               <Img
                 fluid={props.data.s1.childImageSharp.fluid}
@@ -189,7 +178,7 @@ const IndexPage = props => {
                 style={{ margin: 1 }}
               />
             </div>
-          </Slider> */}
+          </Slider>
         </Container>
         {/* <ContactPage /> */}
       </Container>
@@ -198,35 +187,35 @@ const IndexPage = props => {
 }
 export default IndexPage
 
-// export const query = graphql`
-//   query {
-//     s1: file(relativePath: { eq: "s1.jpg" }) {
-//       childImageSharp {
-//         fluid(maxWidth: 2000) {
-//           ...GatsbyImageSharpFluid
-//         }
-//       }
-//     }
-//     s2: file(relativePath: { eq: "s2.jpg" }) {
-//       childImageSharp {
-//         fluid(maxWidth: 2000) {
-//           ...GatsbyImageSharpFluid
-//         }
-//       }
-//     }
-//     s3: file(relativePath: { eq: "s3.jpg" }) {
-//       childImageSharp {
-//         fluid(maxWidth: 2000) {
-//           ...GatsbyImageSharpFluid
-//         }
-//       }
-//     }
-//     s4: file(relativePath: { eq: "s4.jpg" }) {
-//       childImageSharp {
-//         fluid(maxWidth: 2000) {
-//           ...GatsbyImageSharpFluid
-//         }
-//       }
-//     }
-//   }
-// `
+export const query = graphql`
+  query {
+    s1: file(relativePath: { eq: "s1.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2000) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    s2: file(relativePath: { eq: "s2.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2000) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    s3: file(relativePath: { eq: "s3.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2000) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    s4: file(relativePath: { eq: "s4.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2000) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`

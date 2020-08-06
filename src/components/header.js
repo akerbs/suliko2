@@ -21,8 +21,8 @@ import Hidden from "@material-ui/core/Hidden"
 import PropTypes from "prop-types"
 import CloseIcon from "@material-ui/icons/Close"
 import bgPatternImg from "../images/bgPatternImg.png"
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-// import { faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons"
 import LangSwAkk from "./langSwAkk"
 import Button from "@material-ui/core/Button"
 import { bgImgPosBb, bgImgPosBbV } from "../pages/index"
@@ -192,61 +192,61 @@ function Header(props) {
     setOpen(false)
   }
 
-  // const listenScrollEvent = event => {
-  //   if (window.innerWidth <= 300) {
-  //     if (window.scrollY < window.innerWidth * 1.16) {
-  //       setColor("transparent")
-  //     } else {
-  //       setColor("secondary")
-  //     }
-  //   } else if (window.innerWidth <= 600) {
-  //     if (window.scrollY < window.innerWidth * 1.2) {
-  //       setColor("transparent")
-  //     } else {
-  //       setColor("secondary")
-  //     }
-  //   } else if (window.innerWidth <= 700) {
-  //     if (window.scrollY < window.innerWidth * 0.48) {
-  //       setColor("transparent")
-  //     } else {
-  //       setColor("secondary")
-  //     }
-  //   } else if (window.innerWidth <= 800) {
-  //     if (window.scrollY < window.innerWidth * 0.5) {
-  //       setColor("transparent")
-  //     } else {
-  //       setColor("secondary")
-  //     }
-  //   } else if (window.innerWidth <= 900) {
-  //     if (window.scrollY < window.innerWidth * 0.52) {
-  //       setColor("transparent")
-  //     } else {
-  //       setColor("secondary")
-  //     }
-  //   } else if (window.innerWidth <= 1050) {
-  //     if (window.scrollY < window.innerWidth * 0.54) {
-  //       setColor("transparent")
-  //     } else {
-  //       setColor("secondary")
-  //     }
-  //   } else if (window.innerWidth <= 1400) {
-  //     if (window.scrollY < window.innerWidth * 0.55) {
-  //       setColor("transparent")
-  //     } else {
-  //       setColor("secondary")
-  //     }
-  //   } else if (window.scrollY < window.innerWidth * 0.57) {
-  //     setColor("transparent")
-  //   } else {
-  //     setColor("secondary")
-  //   }
-  // }
+  const listenScrollEvent = event => {
+    if (window.innerWidth <= 300) {
+      if (window.scrollY < window.innerWidth * 1.16) {
+        setColor("transparent")
+      } else {
+        setColor("secondary")
+      }
+    } else if (window.innerWidth <= 600) {
+      if (window.scrollY < window.innerWidth * 1.2) {
+        setColor("transparent")
+      } else {
+        setColor("secondary")
+      }
+    } else if (window.innerWidth <= 700) {
+      if (window.scrollY < window.innerWidth * 0.48) {
+        setColor("transparent")
+      } else {
+        setColor("secondary")
+      }
+    } else if (window.innerWidth <= 800) {
+      if (window.scrollY < window.innerWidth * 0.5) {
+        setColor("transparent")
+      } else {
+        setColor("secondary")
+      }
+    } else if (window.innerWidth <= 900) {
+      if (window.scrollY < window.innerWidth * 0.52) {
+        setColor("transparent")
+      } else {
+        setColor("secondary")
+      }
+    } else if (window.innerWidth <= 1050) {
+      if (window.scrollY < window.innerWidth * 0.54) {
+        setColor("transparent")
+      } else {
+        setColor("secondary")
+      }
+    } else if (window.innerWidth <= 1400) {
+      if (window.scrollY < window.innerWidth * 0.55) {
+        setColor("transparent")
+      } else {
+        setColor("secondary")
+      }
+    } else if (window.scrollY < window.innerWidth * 0.57) {
+      setColor("transparent")
+    } else {
+      setColor("secondary")
+    }
+  }
 
-  // useEffect(() => {
-  //   window.addEventListener("scroll", listenScrollEvent)
+  useEffect(() => {
+    window.addEventListener("scroll", listenScrollEvent)
 
-  //   return () => window.removeEventListener("scroll", listenScrollEvent)
-  // }, [])
+    return () => window.removeEventListener("scroll", listenScrollEvent)
+  }, [])
 
   return (
     <ThemeProvider theme={theme}>
@@ -318,7 +318,7 @@ function Header(props) {
       >
         <div className={classes.drawerHeader}>
           <div className={classes.mediaIcons}>
-            {/* <a
+            <a
               target="_blank"
               rel="noopener noreferrer"
               href="https://www.facebook.com/restaurant.suliko.hamburg"
@@ -339,7 +339,7 @@ function Header(props) {
               <ListItem button key={"instagram"} className={classes.mediaIcon}>
                 <FontAwesomeIcon icon={faInstagram} size="2x" />
               </ListItem>
-            </a> */}
+            </a>
           </div>
           <CloseIcon style={{ color: "transparent" }} />
 
