@@ -27,6 +27,16 @@ const useStyles = makeStyles(theme => ({
   root: {
     backgroundColor: "#f9eacf",
   },
+
+  phoneEmailLink: {
+    color: "black",
+    textDecoration: "none",
+
+    "&:hover": {
+      color: "black",
+      fontWeight: "bold",
+    },
+  },
 }))
 
 const IndexPage = props => {
@@ -212,14 +222,8 @@ const IndexPage = props => {
                   target="_blank"
                   rel="noopener noreferrer"
                   href="tel:+4904049201953"
-                  style={{
-                    color: "black",
-                    textDecoration: "none",
-                    "&:hover": {
-                      color: "black",
-                      fontWeight: "bold",
-                    },
-                  }}
+                  className={classes.phoneEmailLink}
+                  //  onClick="this.blur()"
                 >
                   <PhoneIcon style={{ fontSize: 20 }} /> +49(0)40 49201953
                 </a>
@@ -228,14 +232,8 @@ const IndexPage = props => {
                   target="_blank"
                   rel="noopener noreferrer"
                   href="mailto:info@restaurant-suliko.de"
-                  style={{
-                    color: "black",
-                    textDecoration: "none",
-                    "&:hover": {
-                      color: "black",
-                      fontWeight: "bold",
-                    },
-                  }}
+                  className={classes.phoneEmailLink}
+                  //  onClick="this.blur()"
                 >
                   <EmailIcon style={{ fontSize: 20 }} />{" "}
                   info@restaurant-suliko.de
