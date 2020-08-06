@@ -192,61 +192,61 @@ function Header(props) {
     setOpen(false)
   }
 
-  const listenScrollEvent = event => {
-    if (window.innerWidth <= 300) {
-      if (window.scrollY < window.innerWidth * 1.16) {
-        setColor("transparent")
-      } else {
-        setColor("secondary")
-      }
-    } else if (window.innerWidth <= 600) {
-      if (window.scrollY < window.innerWidth * 1.2) {
-        setColor("transparent")
-      } else {
-        setColor("secondary")
-      }
-    } else if (window.innerWidth <= 700) {
-      if (window.scrollY < window.innerWidth * 0.48) {
-        setColor("transparent")
-      } else {
-        setColor("secondary")
-      }
-    } else if (window.innerWidth <= 800) {
-      if (window.scrollY < window.innerWidth * 0.5) {
-        setColor("transparent")
-      } else {
-        setColor("secondary")
-      }
-    } else if (window.innerWidth <= 900) {
-      if (window.scrollY < window.innerWidth * 0.52) {
-        setColor("transparent")
-      } else {
-        setColor("secondary")
-      }
-    } else if (window.innerWidth <= 1050) {
-      if (window.scrollY < window.innerWidth * 0.54) {
-        setColor("transparent")
-      } else {
-        setColor("secondary")
-      }
-    } else if (window.innerWidth <= 1400) {
-      if (window.scrollY < window.innerWidth * 0.55) {
-        setColor("transparent")
-      } else {
-        setColor("secondary")
-      }
-    } else if (window.scrollY < window.innerWidth * 0.57) {
-      setColor("transparent")
-    } else {
-      setColor("secondary")
-    }
-  }
+  // const listenScrollEvent = event => {
+  //   if (window.innerWidth <= 300) {
+  //     if (window.scrollY < window.innerWidth * 1.16) {
+  //       setColor("transparent")
+  //     } else {
+  //       setColor("secondary")
+  //     }
+  //   } else if (window.innerWidth <= 600) {
+  //     if (window.scrollY < window.innerWidth * 1.2) {
+  //       setColor("transparent")
+  //     } else {
+  //       setColor("secondary")
+  //     }
+  //   } else if (window.innerWidth <= 700) {
+  //     if (window.scrollY < window.innerWidth * 0.48) {
+  //       setColor("transparent")
+  //     } else {
+  //       setColor("secondary")
+  //     }
+  //   } else if (window.innerWidth <= 800) {
+  //     if (window.scrollY < window.innerWidth * 0.5) {
+  //       setColor("transparent")
+  //     } else {
+  //       setColor("secondary")
+  //     }
+  //   } else if (window.innerWidth <= 900) {
+  //     if (window.scrollY < window.innerWidth * 0.52) {
+  //       setColor("transparent")
+  //     } else {
+  //       setColor("secondary")
+  //     }
+  //   } else if (window.innerWidth <= 1050) {
+  //     if (window.scrollY < window.innerWidth * 0.54) {
+  //       setColor("transparent")
+  //     } else {
+  //       setColor("secondary")
+  //     }
+  //   } else if (window.innerWidth <= 1400) {
+  //     if (window.scrollY < window.innerWidth * 0.55) {
+  //       setColor("transparent")
+  //     } else {
+  //       setColor("secondary")
+  //     }
+  //   } else if (window.scrollY < window.innerWidth * 0.57) {
+  //     setColor("transparent")
+  //   } else {
+  //     setColor("secondary")
+  //   }
+  // }
 
-  useEffect(() => {
-    window.addEventListener("scroll", listenScrollEvent)
+  // useEffect(() => {
+  //   window.addEventListener("scroll", listenScrollEvent)
 
-    return () => window.removeEventListener("scroll", listenScrollEvent)
-  }, [])
+  //   return () => window.removeEventListener("scroll", listenScrollEvent)
+  // }, [])
 
   return (
     <ThemeProvider theme={theme}>
