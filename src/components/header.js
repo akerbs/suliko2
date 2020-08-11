@@ -26,6 +26,7 @@ import { faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons"
 // import LangSwAkk from "./langSwAkk"
 import Button from "@material-ui/core/Button"
 import { bgImgPosBb, bgImgPosBbV } from "../pages/index"
+import { AnchorLink } from "gatsby-plugin-anchor-links"
 
 const drawerWidth = "auto"
 
@@ -385,7 +386,7 @@ function Header(props) {
           </ListItem>
         </Link>
         <Link
-          to="/page-2"
+          to="/menu"
           className={classes.drawerItem}
           activeClassName={classes.active}
         >
@@ -401,7 +402,7 @@ function Header(props) {
         </Link>
 
         <Link
-          to="/page-2"
+          to="/#contact"
           className={classes.drawerItem}
           activeClassName={classes.active}
         >

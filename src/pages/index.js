@@ -22,6 +22,7 @@ import HomeIcon from "@material-ui/icons/Home"
 import PhoneIcon from "@material-ui/icons/Phone"
 import EmailIcon from "@material-ui/icons/Email"
 import ScheduleIcon from "@material-ui/icons/Schedule"
+import { AnchorLink } from "gatsby-plugin-anchor-links"
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -90,32 +91,39 @@ const IndexPage = props => {
     <Layout>
       <Container style={{ margin: 0, padding: 0, zIndex: 99 }}>
         <SEO title="Home" />
+        <Container
+          id="bgImgs"
+          style={{ width: "100vw", maxWidth: "100vw", margin: 0, padding: 0 }}
+        >
+          <picture>
+            <source
+              media="(max-width: 599px)"
+              srcset={imgs1ovV}
+              type="image/webp"
+            />
+            <source
+              media="(max-width: 599px)"
+              srcset={imgs1ov}
+              type="image/gif"
+            />
+            <source
+              media="(min-width: 600px)"
+              srcset={bgImgs}
+              type="image/webp"
+            />
+            <source
+              media="(min-width: 600px)"
+              srcset={bgImgsV}
+              type="image/gif"
+            />
+            <img
+              src={bgImgsV}
+              alt="georgian food"
+              style={{ width: "100%", height: "auto" }}
+            />
+          </picture>
+        </Container>
 
-        <picture style={{ width: "100vw", height: "auto" }}>
-          <source
-            media="(max-width: 599px)"
-            srcset={imgs1ovV}
-            type="image/webp"
-            style={{ width: "100vw", height: "auto" }}
-          />
-          <source
-            media="(min-width: 600px)"
-            srcset={imgs1ov}
-            type="image/webp"
-            style={{ width: "100vw", height: "auto" }}
-          />
-          <source
-            media="(min-width: 600px)"
-            srcset={bgImgs}
-            style={{ width: "100vw", height: "auto" }}
-          />
-
-          <img
-            src={bgImgsV}
-            alt="georgian food"
-            style={{ width: "100vw", height: "auto" }}
-          />
-        </picture>
         <Container maxWidth="md">
           <br /> <br /> <br /> <br />
           <Container id="abount us">
@@ -193,6 +201,7 @@ const IndexPage = props => {
             </div>
           </Slider>
         </Container> */}
+          <div id="contact" />
           <Container
             maxWidth="md"
             style={{
